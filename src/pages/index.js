@@ -8,35 +8,32 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: "All your life data",
+    title: "Monitor uptime every 5 minutes",
     imageUrl: "img/DancingDoodle.svg",
     description: (
       <>
-        Connect your lifestyle services, from music (Spotify, Last.fm) and
-        podcasts (Pocket Casts), to reading (Goodreads) and time tracking
-        (RescueTime, Wakatime, Clockify).
+        Using GitHub Actions, monitor unlimited webpages every 5 minutes, and
+        store version-controlled response time stats.
       </>
     ),
   },
   {
-    title: "All your health data",
+    title: "Modern status page website",
     imageUrl: "img/RollerSkatingDoodle.svg",
     description: (
       <>
-        Connect your Apple Watch or Android/iOS smartphone's health tracking
-        using Google Fit, or connect your Oura Ring to accurately track your
-        health data.
+        Get a sleek and beautiful status page powered by a modern Svelte static
+        site with outage history and long-term trend charts.
       </>
     ),
   },
   {
-    title: "Always up to date",
+    title: "Get notified where you work",
     imageUrl: "img/UnboxingDoodle.svg",
     description: (
       <>
-        Using GitHub Actions and open source code, always keep your data up to
-        datEa (updates every day or hour) and access it using simple-to-use
-        RESTful APIs.
+        Find out the moment any website goes down, with built-in notification
+        support for Slack, Telegram, custom webhooks, and more.
       </>
     ),
   },
@@ -72,12 +69,24 @@ function Home() {
               className={clsx("button button--lg", styles.getStarted)}
               to={useBaseUrl("docs/")}
             >
-              Read upptime docs &rarr;
+              View sample site
+            </Link>
+            <Link
+              className={clsx("button button--lg ml", styles.getStarted)}
+              to={useBaseUrl("docs/")}
+            >
+              Read docs &rarr;
             </Link>
           </div>
         </div>
       </header>
       <main>
+        <div className="container">
+          <iframe
+            className={styles.exampleFrame}
+            src="https://upptime.js.org"
+          ></iframe>
+        </div>
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">

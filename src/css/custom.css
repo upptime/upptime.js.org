@@ -54,3 +54,17 @@ iframe {
   max-width: 100%;
   width: 250px;
 }
+
+.button + .button {
+  margin-left: 1rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10rem;
+  height: 10rem;
+  background-color: var(--ifm-color-primary);
+}

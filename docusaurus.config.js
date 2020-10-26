@@ -1,6 +1,6 @@
 module.exports = {
   title: "Upptime",
-  tagline: "Track, visualize, and embed your health and life data",
+  tagline: "GitHub-powered open-source uptime monitor and status page",
   url: "https://upptime.js.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -9,9 +9,9 @@ module.exports = {
   projectName: "upptime.js.org",
   themeConfig: {
     navbar: {
-      title: "upptime",
+      title: "Upptime",
       logo: {
-        alt: "upptime Logo",
+        alt: "",
         src: "/img/icon.svg",
       },
       items: [
@@ -19,6 +19,11 @@ module.exports = {
           to: "docs/",
           activeBasePath: "docs",
           label: "Docs",
+          position: "left",
+        },
+        {
+          href: "https://github.com/upptime/upptime",
+          label: "Example",
           position: "left",
         },
         {
@@ -32,7 +37,7 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "upptime",
+          title: "Upptime",
           items: [
             {
               label: "Get started",
