@@ -50,83 +50,84 @@ module.exports = {
           title: "Upptime",
           items: [
             {
-              label: "Get started",
+              label: "Documentation",
               to: "docs/",
             },
             {
-              label: "Integrations",
-              to: "docs/integrations/",
+              label: "Getting started",
+              to: "docs/get-started",
             },
             {
-              label: "Embed",
-              to: "docs/embed/",
+              label: "Example website",
+              to: "https://upptime.js.org",
             },
             {
-              label: "GitHub",
+              label: "GitHub organization",
               href: "https://github.com/upptime",
             },
           ],
         },
         {
-          title: "Lifestyle integrations",
+          title: "Support",
           items: [
             {
-              label: "Spotify",
-              to: "docs/integrations/spotify",
+              label: "Open an issue",
+              to: "https://github.com/upptime/upptime/issues",
             },
             {
-              label: "Last.fm",
-              to: "docs/integrations/last-fm",
+              label: "Stack Overflow",
+              to: "https://stackoverflow.com/questions/tagged/upptime",
             },
             {
-              label: "Pocket Casts",
-              to: "docs/integrations/pocket-casts",
+              label: "Feedback",
+              to: "mailto:upptime@koj.co",
             },
             {
-              label: "Goodreads",
-              to: "docs/integrations/goodreads",
-            },
-            {
-              label: "Twitter",
-              to: "docs/integrations/twitter",
+              label: "Contributing",
+              to: "/docs/contributing",
             },
           ],
         },
         {
-          title: "Time tracking integrations",
+          title: "Packages",
           items: [
             {
-              label: "RescueTime",
-              to: "docs/integrations/rescuetime",
+              label: "GitHub template",
+              to: "https://github.com/upptime/upptime",
             },
             {
-              label: "Wakatime",
-              to: "docs/integrations/wakatime",
+              label: "Uptime monitor",
+              to: "https://github.com/upptime/uptime-monitor",
             },
             {
-              label: "Clockify",
-              to: "docs/integrations/clockify",
+              label: "Status page",
+              to: "https://github.com/upptime/status-page",
+            },
+            {
+              label: "Graphs generator",
+              to: "https://github.com/upptime/graphs",
             },
           ],
         },
         {
-          title: "Health integrations",
+          title: "Koj open source",
           items: [
             {
-              label: "Google Fit",
-              to: "docs/integrations/google-fit",
+              label: "@koj-co on GitHub",
+              to: "https://github.com/koj-co",
             },
             {
-              label: "Oura Ring",
-              to: "docs/integrations/oura-ring",
+              label: "Koj Engineering Blog",
+              to: "https://koj.co/engineering",
             },
             {
-              label: "Apple Health",
-              to: "docs/integrations/apple-health",
+              label: "Work with Koj",
+              to: "https://koj.co/careers",
             },
           ],
         },
       ],
+      copyright: `<img alt="Koj" src="https://kojcdn.com/v1593890003/website-v2/logo-white_rrauqe.svg" style="width: 50px; margin: 2.5rem 0"><p>Upptime is an open-source project by <a href="https://koj.co/?utm_source=upptime&utm_medium=footer&utm_campaign=docs">Koj</a>.<br><a href="https://koj.co/?utm_source=upptime&utm_medium=footer&utm_campaign=docs">Furnish your home in style, for as low as CHF175/month →</a></p>`,
     },
   },
   presets: [
