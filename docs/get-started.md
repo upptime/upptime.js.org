@@ -1,6 +1,5 @@
 ---
 title: Getting started
-slug: /
 ---
 
 ...

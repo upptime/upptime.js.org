@@ -22,13 +22,23 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://github.com/upptime/upptime",
-          label: "Example",
+          to: "docs/get-started",
+          label: "Getting started",
           position: "left",
         },
         {
           href: "https://github.com/upptime/upptime",
-          label: "GitHub",
+          label: "Example website",
+          position: "left",
+        },
+        {
+          href: "https://github.com/upptime/upptime",
+          label: "GitHub template",
+          position: "left",
+        },
+        {
+          href: "https://github.com/upptime",
+          label: "@upptime on GitHub",
           position: "right",
         },
       ],
