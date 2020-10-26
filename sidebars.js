@@ -1,5 +1,3 @@
 module.exports = {
-  sidebar: {
-    "Getting started": ["get-started"],
-  },
+  sidebar: ["get-started"],
 };
