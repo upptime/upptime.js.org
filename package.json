@@ -5,10 +5,11 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && npm run site",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "serve": "docusaurus serve"
+    "serve": "docusaurus serve",
+    "site": "node tooling/example-site.js"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.66",
