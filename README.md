@@ -14,10 +14,6 @@ This repository is for Upptime's GitHub Action. We love contributions, so please
 
 We use the [upptime/upptime](https://github.com/upptime/upptime) repository for issues for all projects, including this one. If you found a bug or have a feature request, [open an issue](https://github.com/upptime/upptime/issues) in the Upptime repository and add the label "action".
 
-## 💻 Usage
-
-When you use Upptime, we automatically add the required workflows.
-
 ## 📄 License
 
 [MIT](./LICENSE) © [Koj](https://koj.co)
