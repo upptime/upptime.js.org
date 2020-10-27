@@ -68,3 +68,7 @@ iframe {
   height: 10rem;
   background-color: var(--ifm-color-primary);
 }
+
+.token.key {
+  color: lightgreen;
+}
