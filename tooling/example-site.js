@@ -10,3 +10,7 @@ execSync(
 execSync("cp -r status build", {
   stdio: "ignore",
 });
+
+execSync("rm -rf build/status/.git", {
+  stdio: "ignore",
+});
