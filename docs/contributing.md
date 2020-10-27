@@ -2,4 +2,4 @@
 title: Contributing
 ---
 
-...
+Coming soon
