@@ -78,6 +78,7 @@ function Home() {
               Read docs &rarr;
             </Link>
           </div>
+          <p class="real">This is a real status website &darr;</p>
         </div>
       </header>
       <main>

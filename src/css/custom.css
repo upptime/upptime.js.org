@@ -72,3 +72,9 @@ iframe {
 .token.key {
   color: lightgreen;
 }
+
+.real {
+  margin-bottom: -2rem;
+  margin-top: 2rem;
+  font-style: italic;
+}
