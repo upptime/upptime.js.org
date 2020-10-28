@@ -5,6 +5,7 @@ module.exports = {
     "configuration",
     "triggers",
     "notifications",
+    "badges",
     "packages",
     "contributing",
   ],
