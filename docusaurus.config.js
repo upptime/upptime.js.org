@@ -27,7 +27,7 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://github.com/upptime/upptime",
+          href: "https://upptime.js.org/status/",
           label: "Example website",
           position: "left",
         },
@@ -59,7 +59,7 @@ module.exports = {
             },
             {
               label: "Example website",
-              to: "https://upptime.js.org",
+              to: "https://upptime.js.org/status/",
             },
             {
               label: "GitHub organization",
@@ -123,6 +123,10 @@ module.exports = {
             {
               label: "Work with Koj",
               to: "https://koj.co/careers",
+            },
+            {
+              label: "Koj",
+              to: "https://koj.co",
             },
           ],
         },

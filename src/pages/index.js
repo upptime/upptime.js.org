@@ -67,7 +67,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx("button button--lg", styles.getStarted)}
-              to={useBaseUrl("docs/")}
+              href="https://upptime.js.org/status/"
             >
               View sample site
             </Link>
@@ -85,7 +85,7 @@ function Home() {
         <div className="container">
           <iframe
             className={styles.exampleFrame}
-            src="https://upptime.js.org"
+            src="https://upptime.js.org/status/"
           ></iframe>
         </div>
         {features && features.length > 0 && (
