@@ -5,6 +5,7 @@
 /build
 build/embed/
 build/branding/
+/status
 
 # Generated files
 .docusaurus
