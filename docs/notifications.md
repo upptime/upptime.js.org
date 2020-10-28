@@ -34,3 +34,21 @@ Use `discord` as the type and create an environment variable `DISCORD_WEBHOOK_UR
 notifications:
   - type: discord
 ```
+
+## Email
+
+Use `email` as the type and add the environment variables below as GitHub repository secrets.
+
+```yaml
+notifications:
+  - type: email
+```
+
+| Environment variable         | Description                           |
+| ---------------------------- | ------------------------------------- |
+| `NOTIFICATION_EMAIl`         | Email to send notifications to        |
+| `NOTIFICATION_SMTP_HOST`     | SMTP hostname                         |
+| `NOTIFICATION_SMTP_PORT`     | SMTP port, defaults to `587`          |
+| `NOTIFICATION_SMTP_SECURE`   | `true` for 465, false for other ports |
+| `NOTIFICATION_SMTP_USER`     | SMTP user, typically email address    |
+| `NOTIFICATION_SMTP_PASSWORD` | SMTP email password                   |
