@@ -8,10 +8,10 @@ module.exports = {
   organizationName: "upptime",
   projectName: "upptime.js.org",
   plugins: ["@docusaurus/plugin-google-analytics"],
-  googleAnalytics: {
-    trackingID: "G-TYJM49782H",
-  },
   themeConfig: {
+    googleAnalytics: {
+      trackingID: "G-TYJM49782H",
+    },
     navbar: {
       title: "Upptime",
       logo: {
