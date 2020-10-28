@@ -7,7 +7,6 @@ module.exports = {
   favicon: "/img/icon.svg",
   organizationName: "upptime",
   projectName: "upptime.js.org",
-  plugins: ["@docusaurus/plugin-google-analytics"],
   themeConfig: {
     googleAnalytics: {
       trackingID: "G-TYJM49782H",
