@@ -7,6 +7,10 @@ module.exports = {
   favicon: "/img/icon.svg",
   organizationName: "upptime",
   projectName: "upptime.js.org",
+  plugins: ["@docusaurus/plugin-google-analytics"],
+  googleAnalytics: {
+    trackingID: "G-TYJM49782H",
+  },
   themeConfig: {
     navbar: {
       title: "Upptime",
