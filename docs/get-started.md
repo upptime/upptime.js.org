@@ -74,6 +74,16 @@ status-website: # Status website (optional)
   name: Upptime # Status website title
 ```
 
+If you're not using a custom domain, you can remove the line starting with `cname:` and instead add the GitHub repository name:
+
+```yaml
+status-website:
+  baseUrl: /repo # where "repo" is your repository name
+  name: Your Status Website
+```
+
+Then, your status page may be hosted on https://user.github.io/repo/, where `user` is your GitHub username and `repo` is your repository name.
+
 ### Viewing GitHub Actions workflows
 
 After updating the configuration file, Upptime should run workflows using GitHub Actions to update your `README.md` and generate API endpoints and graphs. To view the status, click on the "Actions" tab in your repository. You should see pending or complete workflows. If you don't, you can manually trigger the "Setup CI" using the [Triggers](/docs/triggers) article.

@@ -15,6 +15,7 @@ assignees: # Users to assign downtime issues (optional)
   - AnandChowdhary
 status-website: # Status website (optional)
   cname: upptime.js.org # Custom domain CNAME
+  # baseUrl: /repo
   name: Upptime # Status website title
 ```
 
@@ -119,6 +120,8 @@ status-website:
   logoUrl: https://example.com/image.jpg
 ```
 
+### Custom domain
+
 If you want to add a custom domain, you can add the cname key:
 
 ```yaml
@@ -127,6 +130,16 @@ status-website:
   logoUrl: https://example.com/image.jpg
   cname: upptime.js.org # Custom CNAME
 ```
+
+If you're not using a custom domain, you should add the base URL to support the default GitHub Pages URL.
+
+```yaml
+status-website:
+  baseUrl: /repo # where "repo" is your repository name
+  name: Your Status Website
+```
+
+Then, your status page may be hosted on https://user.github.io/repo/, where `user` is your GitHub username and `repo` is your repository name.
 
 ### Navbar links
 
