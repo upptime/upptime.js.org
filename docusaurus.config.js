@@ -11,6 +11,8 @@ module.exports = {
     googleAnalytics: {
       trackingID: "G-TYJM49782H",
     },
+    image: "/img/smo.png",
+    metadatas: [{ name: "twitter:card", content: "summary" }],
     navbar: {
       title: "Upptime",
       logo: {
