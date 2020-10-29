@@ -128,6 +128,19 @@ status-website:
   cname: upptime.js.org # Custom CNAME
 ```
 
+### Navbar links
+
+You can customize the navbar by adding or removing top-level navigation links.
+
+```yaml
+status-website:
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/$OWNER/$REPO
+```
+
 ### Intro text
 
 Optionally, you can add some introductory text to the website. You can use Markdown:
