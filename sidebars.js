@@ -8,5 +8,6 @@ module.exports = {
     "badges",
     "packages",
     "contributing",
+    "faq",
   ],
 };
