@@ -92,7 +92,7 @@ If you've forked the Upptime repository or have rules to disable Actions by defa
 
 ### Deleting sample data
 
-There is sample data available in the `api`, `graphs`, and `history` directories. You can optionally delete this data from your new repository. Even if you don't, it wouldn't be visible on your status website or `README.md`, but it's good to remove. To delete the directory, perform the following steps ([source](https://github.community/t/how-to-delete-multiples-files-in-github/702/3)):
+There is sample data available in the `api`, `graphs`, and `history` directories. You can optionally delete this data from your new repository. Even if you don't, it wouldn't be visible on your status website or `README.md`, but it's good to remove. To delete the directories, perform the following steps ([source](https://github.community/t/how-to-delete-multiples-files-in-github/702/3)).
 
 1. Clone your newly created repository (see [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
 1. Enter the directory (`cd upptime`) in a terminal window
@@ -100,3 +100,5 @@ There is sample data available in the `api`, `graphs`, and `history` directories
 1. Recursively remove the folder: `git rm -r api graphs history`
 1. Commit the change: `git commit -m ":fire: Remove sample data"`
 1. Push the change to your remote repository: `git push origin main` or `git push origin master`
+
+You can also use your operating system's file manager to delete the directories `api`, `graphs`, and `history`, and then commit and push your changes.
