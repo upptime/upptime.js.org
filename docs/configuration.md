@@ -178,3 +178,19 @@ i18n:
   allSystemsOperational: Todos los sistemas están operativos
   # ...
 ```
+
+### Repository metadata
+
+If you've just set up your new repository and don't have repository metadata (like description, topics, and homepage), Upptime will update that for you. It will update the metadata as follows:
+
+- **Description:** "📈 Uptime monitor and status page for $TITLE, powered by @upptime", where $TITLE is the name of your GitHub organization or user
+- **Topics:** "uptime-monitor", "status-page", "upptime"
+- **Homepage:** Link to your status website
+
+You can add these configuration properties if you don't want these updates to occur:
+
+```yaml
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
+skipHomepageUpdate: true
+```
