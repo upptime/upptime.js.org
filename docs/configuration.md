@@ -194,3 +194,23 @@ skipDescriptionUpdate: true
 skipTopicsUpdate: true
 skipHomepageUpdate: true
 ```
+
+### Git commit options
+
+Upptime commits to git history to keep a track of response times, and also commits graphs and README updates. You can change the commit messages for each of these actions:
+
+```yaml
+commitMessages:
+  readmeContent: ":pencil: Update summary in README [skip ci] [upptime]"
+  summaryJson: ":card_file_box: Update status summary [skip ci] [upptime]"
+  statusChange: "$EMOJI $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms) [skip ci] [upptime]"
+  graphsUpdate: ":bento: Update graphs [skip ci] [upptime]"
+```
+
+By default, these commits are done by [Upptime Bot](https://github.com/upptime-bot), but you can overwrite these commits to use your bot instead.
+
+```yaml
+commitMessages:
+  commitAuthorName: "Upptime Bot"
+  commitAuthorEmail: "upptime@koj.co"
+```
