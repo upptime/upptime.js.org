@@ -25,7 +25,7 @@ To get a static status website, you have to enable GitHub Pages on your new repo
 
 1. Go to your repository settings page
 1. Scroll to "GitHub Pages" settings
-1. Under "Source", change "None" to the name of your default branch (usually `main` or `master`)
+1. Under "Source", change "None" to `gh-pages`)
 1. Click on "Save"
 
 After saving, you will see confirmation text "Your site is ready to be published at...". For more information on enabling GitHub Pages, see the article on the GitHub website: [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
