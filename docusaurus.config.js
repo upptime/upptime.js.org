@@ -11,6 +11,10 @@ module.exports = {
     googleAnalytics: {
       trackingID: "G-TYJM49782H",
     },
+    algolia: {
+      apiKey: "b5f7196e491eb55ad9ef3ca8d04e90fd",
+      indexName: "upptime",
+    },
     image: "/img/smo.png",
     metadatas: [{ name: "twitter:card", content: "summary" }],
     navbar: {
