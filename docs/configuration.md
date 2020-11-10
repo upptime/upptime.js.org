@@ -77,8 +77,8 @@ Similarly, you can set headers in a request like so:
 - name: API endpoint
   url: https://example.com/get-user/3
   headers:
-    - Authorization: Bearer $SECRET_SITE_2
-    - Content-Type: application/json
+    - "Authorization: Bearer $SECRET_SITE_2"
+    - "Content-Type: application/json"
 ```
 
 ### User agent
