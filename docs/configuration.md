@@ -55,22 +55,14 @@ sites:
     method: DELETE
 ```
 
-If you don't want to show a URL publicly, you can use repository secrets (see Creating and storing encrypted secrets). Instead of the plain text URL, add the name of the secret prefixed with a \$ character:
+If you don't want to show a URL publicly, you can use repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)). Instead of the plain text URL, add the name of the secret prefixed with a $ character:
 
 ```yaml
 - name: Secret Site
   url: $SECRET_SITE
 ```
 
-In the above example, a secret named SECRET_SITE (without the \$) is stored in the repository. Note that you'll also have to add this secret as an environment variable in each workflow file in .github/workflows:
-
-```yaml title=".github/workflows/graphs.yml"
-# ...
-- name: Run script
-  run: npm run graphs
-  env:
-    SECRET_SITE: ${{ secrets.SECRET_SITE }} # Add your repository secret
-```
+In the above example, a secret named SECRET_SITE (without the $) is stored in the repository. You can add up to 10 additional secret sites, like `$SECRET_SITE_1`, `$SECRET_SITE_2`, `$SECRET_SITE_3`, etc.
 
 ### User agent
 
