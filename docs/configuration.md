@@ -64,6 +64,23 @@ If you don't want to show a URL publicly, you can use repository secrets (see [C
 
 In the above example, a secret named SECRET_SITE (without the $) is stored in the repository. You can add up to 10 additional secret sites, like `$SECRET_SITE_1`, `$SECRET_SITE_2`, `$SECRET_SITE_3`, etc.
 
+You can also use these secrets as part of the URL, for example:
+
+```yaml
+- name: API endpoint
+  url: https://example.com/get-user/3?api_key=$SECRET_SITE_2
+```
+
+Similarly, you can set headers in a request like so:
+
+```yaml
+- name: API endpoint
+  url: https://example.com/get-user/3
+  headers:
+    - Authorization: Bearer $SECRET_SITE_2
+    - Content-Type: application/json
+```
+
 ### User agent
 
 Requests made to the GitHub API must include a valid User-Agent header (see User Agent required). It is recommended to use your GitHub username here:
