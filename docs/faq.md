@@ -15,6 +15,10 @@ status-website:
   baseUrl: /repo # "repo" is your repository name
 ```
 
+## My status website doesn't work with my private repository.
+
+It is **not** possible to publish a status website from a private repository.
+
 ## How do I remove the "Powered by Upptime" in the footer of my website?
 
 You can add an internationalization object that overwrites some keys, see [Internationalization](/docs/configuration#internationalization):
