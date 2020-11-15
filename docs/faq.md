@@ -17,7 +17,7 @@ status-website:
 
 ## My status website doesn't work with my private repository.
 
-It is **not** possible to publish a status website from a private repository.
+By default, Upptime only supports publishing status websites from public repositories, since the GitHub API is used to fetch data. However, you can set up a proxy API (for example, using a personal access token with readonly access to your private repository) and set that as the `apiBaseUrl` configuration key under `status-website`. See [#54](https://github.com/upptime/upptime/issues/54) and the [Configuration for `apiBaseUrl`](https://upptime.js.org/docs/configuration#custom-api-base-url) to learn how to set up a status website from your private repository.
 
 ## How do I remove the "Powered by Upptime" in the footer of my website?
 
