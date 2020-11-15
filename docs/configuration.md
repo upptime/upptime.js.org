@@ -223,3 +223,12 @@ commitMessages:
   commitAuthorName: "Upptime Bot"
   commitAuthorEmail: "upptime@koj.co"
 ```
+
+### Custom API base URL
+
+By default, Upptime uses the official GitHub API to fetch data for your status page website. If you have a proxy API (perhaps using a personal access token with readonly access to your private repository), you can set the `apiBaseUrl` key under `status-website`:
+
+```yaml
+status-website:
+  apiBaseUrl: https://api.github.com
+```
