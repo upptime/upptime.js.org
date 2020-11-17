@@ -81,6 +81,14 @@ Similarly, you can set headers in a request like so:
     - "Content-Type: application/json"
 ```
 
+If you're using a self-signed SSL certificate, you can set the `__dangerous__insecure` option to `true` to skip verifying the certificate:
+
+```yaml
+- name: API endpoint
+  url: https://example.com/get-user/3
+  __dangerous__insecure: true
+```
+
 ### User agent
 
 Requests made to the GitHub API must include a valid User-Agent header (see User Agent required). It is recommended to use your GitHub username here:
