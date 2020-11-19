@@ -42,8 +42,9 @@ sites:
     url: https://www.google.com
   - name: DuckDuckGo
     url: https://duckduckgo.com
-To make POST requests (or any other HTTP verb), you can add the method key:
 ```
+
+To make POST requests (or any other HTTP verb), you can add the method key:
 
 ```yaml
 sites:
