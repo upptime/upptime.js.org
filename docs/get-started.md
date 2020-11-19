@@ -45,7 +45,7 @@ To make commits and publish your website, Upptime requires a personal access tok
 5. Select the "repo" scope
 6. Click "Generate token"
 
-After generating your token, copy it (you will not see it again). Then, add it as a repository sectet:
+After generating your token, copy it (you will not see it again). Then, add it as a repository secret:
 
 1. In your Upptime repository, select "Settings"
 2. In the left sidebar, click "Secrets"
