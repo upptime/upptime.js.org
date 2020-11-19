@@ -81,6 +81,18 @@ Similarly, you can set headers in a request like so:
     - "Content-Type: application/json"
 ```
 
+If you, for example, expect a `404` response (which is traditionally an error response), you can set it as `expectedStatusCodes` to mark your site as up. By default, all 20x and 30x responses are as `expectedStatusCodes`:
+
+```yaml
+sites:
+  - name: Google
+    url: https://www.google.com
+    expectedStatusCodes:
+      - 200
+      - 201
+      - 404
+```
+
 If you're using a self-signed SSL certificate, you can set the `__dangerous__insecure` option to `true` to skip verifying the certificate:
 
 ```yaml
