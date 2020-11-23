@@ -102,6 +102,14 @@ If you're using a self-signed SSL certificate, you can set the `__dangerous__ins
   __dangerous__insecure: true
 ```
 
+If you don't want to check for certificate name mismatches, you can set the `__dangerous__disable_verify_host` option to `true` to skip verifying the certificate:
+
+```yaml
+- name: API endpoint
+  url: https://example.com/get-user/3
+  __dangerous__disable_verify_host: true
+```
+
 ### User agent
 
 Requests made to the GitHub API must include a valid User-Agent header (see User Agent required). It is recommended to use your GitHub username here:
