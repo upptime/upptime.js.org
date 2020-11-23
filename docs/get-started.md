@@ -36,7 +36,7 @@ If you don't want to have a publicly-available status website, you don't have to
 
 All sensitive information required, such as API keys, are provided as environment variables. These are stored as GitHub repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)).
 
-To make commits and publish your website, Upptime requires a personal access token (PAT) with the `repo` scope. You can create a personal access token by following these steps:
+To make commits and publish your website, Upptime requires a personal access token (PAT) with the `repo` and `workflow` scope. You can create a personal access token by following these steps:
 
 1. Click on your profile picture on the top-right corner and select "Settings"
 2. In the left sidebar, select "Developer settings"
