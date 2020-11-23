@@ -94,12 +94,12 @@ sites:
       - 404
 ```
 
-If you're using a self-signed SSL certificate, you can set the `__dangerous__insecure` option to `true` to skip verifying the certificate:
+If you're using a self-signed SSL certificate, you can set the `__dangerous__disable_verify_peer` option to `true` to skip verifying the certificate:
 
 ```yaml
 - name: API endpoint
   url: https://example.com/get-user/3
-  __dangerous__insecure: true
+  __dangerous__disable_verify_peer: true
 ```
 
 If you don't want to check for certificate name mismatches, you can set the `__dangerous__disable_verify_host` option to `true` to skip verifying the certificate:
@@ -108,6 +108,14 @@ If you don't want to check for certificate name mismatches, you can set the `__d
 - name: API endpoint
   url: https://example.com/get-user/3
   __dangerous__disable_verify_host: true
+```
+
+Alternately, you can disable both the above settings using `__dangerous__insecure`:
+
+```yaml
+- name: API endpoint
+  url: https://example.com/get-user/3
+  __dangerous__insecure: true
 ```
 
 ### User agent
