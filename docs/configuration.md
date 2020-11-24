@@ -216,7 +216,7 @@ Because GitHub Pages does not support the default `GITHUB_TOKEN` available to wo
 
 ### Internationalization
 
-Though our status page is in English, you can use any language with Upptime by supplying the required strings. The list of all required strings is available in site/i18n.yml, and you can add them under the i18n key in the configuration file:
+Though our status page is in English, you can use any language with Upptime by supplying the required strings. The list of all required strings is available in [`upptime/status-page/i18n.yml`](https://github.com/upptime/status-page/blob/master/i18n.yml), and you can add them under the i18n key in the configuration file:
 
 ```yaml
 i18n:
@@ -224,6 +224,8 @@ i18n:
   allSystemsOperational: Todos los sistemas están operativos
   # ...
 ```
+
+You can, for example, change the footer copyright text by changing the internationalization key.
 
 ### Repository metadata
 
