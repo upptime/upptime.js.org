@@ -110,7 +110,7 @@ If you don't want to check for certificate name mismatches, you can set the `__d
   __dangerous__disable_verify_host: true
 ```
 
-Alternately, you can disable both the above settings using `__dangerous__insecure`:
+Alternately, you can disable both of the above settings using `__dangerous__insecure`:
 
 ```yaml
 - name: API endpoint
@@ -120,7 +120,7 @@ Alternately, you can disable both the above settings using `__dangerous__insecur
 
 ### User agent
 
-Requests made to the GitHub API must include a valid User-Agent header (see User Agent required). It is recommended to use your GitHub username here:
+Requests made to the GitHub API must include a valid User-Agent header (see [User Agent required](https://developer.github.com/v3/#user-agent-required)). It is recommended to use your GitHub username here:
 
 ```yaml
 user-agent: your-github-username
@@ -128,13 +128,7 @@ user-agent: your-github-username
 
 ### Notifications
 
-You can add services to send downtime notifications to. Currently, only Slack and Discord notifications are supported. For more information about notifications, visit the [Notifications docs](/docs/notifications) page:
-
-```yaml
-notifications:
-  - type: slack
-    channel: C01XQ3U9M9P
-```
+You can add services to send downtime notifications to, such as SMS, Slack, or email. For more information about notifications, visit the [Notifications docs](/docs/notifications) page. You can directly configure the notifications in repository secrets (environment variables).
 
 ### Assignees
 
@@ -209,10 +203,6 @@ status-website:
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a sample status page which uses **real-time** data from our [Github repository](https://github.com/koj-co/upptime). No server required — just GitHub Actions, Issues, and Pages.
 ```
-
-### Site deployment
-
-Because GitHub Pages does not support the default `GITHUB_TOKEN` available to workflows, you'll have to set a secret GH_PAT with a Personal Access Token. For more info, see: https://github.com/maxheld83/ghpages#secrets.
 
 ### Internationalization
 
