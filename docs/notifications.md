@@ -18,7 +18,7 @@ When it comes back up, another notification is sent:
 
 ## Strategy
 
-For each notification provider (Slack, email, etc.), you can specify the strategy using the `NOTIFICATION_PROVIDER_STRATEGY` environment variable, where `PROVIDER` is the constant-case service name, for example `NOTIFICATION_SLACK_STRATEGY`. The strategy can be any one of:
+If you have more than one configurations of each provider (say multiple email configurations, both SMTP and SES), you can choose the strategy. For each notification provider (Slack, email, etc.), you can specify the strategy using the `NOTIFICATION_{PROVIDER}_STRATEGY` environment variable, where `{PROVIDER}` is the constant-case service name, for example `NOTIFICATION_SLACK_STRATEGY`. The strategy can be any one of:
 
 | Value                  | Description                                    |
 | ---------------------- | ---------------------------------------------- |
@@ -30,7 +30,7 @@ More information is available on the [Multi-provider strategies](https://github.
 
 ## Providers
 
-For each notification type (Slack, email, etc.), you need to first enable it by setting the `NOTIFICATION_PROVIDER` to `true`, where `PROVIDER` is the constant-case service name, for example `NOTIFICATION_SLACK`. Each notification type also requires additional environment variables. See the examples below.
+For each notification type (Slack, email, etc.), you need to first enable it by setting the `NOTIFICATION_{PROVIDER}` to `true`, where `{PROVIDER}` is the constant-case service name, for example `NOTIFICATION_SLACK`. Each notification type also requires additional environment variables. See the examples below.
 
 ### Slack
 
@@ -40,7 +40,7 @@ For each notification type (Slack, email, etc.), you need to first enable it by 
 | `NOTIFICATION_SLACK_WEBHOOK`     | Set to `true`     |
 | `NOTIFICATION_SLACK_WEBHOOK_URL` | Slack webhook URL |
 
-To create a Discord webhook URL, see the article [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack) on the Slack website.
+To create a Slack webhook URL, see the article [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack) on the Slack website.
 
 ### Discord
 
@@ -66,10 +66,10 @@ All services require you to specify the email address from and to:
 
 #### Sendgrid
 
-| Environment variable                  | Value |
-| ------------------------------------- | ----- |
-| `NOTIFICATION_EMAIL_SENDGRID`         |       |
-| `NOTIFICATION_EMAIL_SENDGRID_API_KEY` |       |
+| Environment variable                  | Value            |
+| ------------------------------------- | ---------------- |
+| `NOTIFICATION_EMAIL_SENDGRID`         | Set to `true`    |
+| `NOTIFICATION_EMAIL_SENDGRID_API_KEY` | Sendgrid API key |
 
 #### AWS SES
 
