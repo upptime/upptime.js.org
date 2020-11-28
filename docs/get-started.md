@@ -90,15 +90,11 @@ After updating the configuration file, Upptime should run workflows using GitHub
 
 If you've forked the Upptime repository or have rules to disable Actions by default, you'll have to manually enable GitHub Actions, but this should probably not be your case.
 
-### Deleting sample data
+### Best practices
 
-There is sample data available in the `api`, `graphs`, and `history` directories. You can optionally delete this data from your new repository. Even if you don't, it wouldn't be visible on your status website or `README.md`, but it's good to remove. To delete the directories, perform the following steps ([source](https://github.community/t/how-to-delete-multiples-files-in-github/702/3)).
+Now that you have your Upptime instance fully set up, you should follow these best practices when adding details to outage incidents.
 
-1. Clone your newly created repository (see [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
-1. Enter the directory (`cd upptime`) in a terminal window
-1. Ensure you are in the default branch: `git checkout main` or `git checkout master`
-1. Recursively remove the folder: `git rm -r api graphs history`
-1. Commit the change: `git commit -m ":fire: Remove sample data"`
-1. Push the change to your remote repository: `git push origin main` or `git push origin master`
-
-You can also use your operating system's file manager to delete the directories `api`, `graphs`, and `history`, and then commit and push your changes.
+- Upptime will automatically open a new issue when an outage occurs
+- If you haven't identified the cause of this outage, you can add a comment like: "**Investigating**: We're currently investigating the cause of this outage, and we'll update the details here shortly."
+- Then, you can add some comments with the details of the outage, and change the name of the issue with the details of the outage
+- The issue will be automatically closed when the site comes back up, so you can add a last comment with a postmortem of the outage
