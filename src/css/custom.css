@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: rgb(171, 255, 238);
+  --ifm-color-primary: rgb(33, 175, 144);
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -59,6 +59,14 @@ iframe {
   margin-left: 1rem;
 }
 
+[data-theme="light"] .hero,
+[data-theme="light"] .hero::after {
+  background-color: rgb(171, 255, 238);
+}
+
+[data-theme="dark"] .hero::after {
+  background-color: var(--ifm-color-primary);
+}
 .hero::after {
   content: "";
   position: absolute;
@@ -66,7 +74,6 @@ iframe {
   right: 0;
   bottom: -10rem;
   height: 10rem;
-  background-color: var(--ifm-color-primary);
 }
 
 .token.key {
