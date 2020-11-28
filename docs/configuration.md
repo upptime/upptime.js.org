@@ -118,14 +118,6 @@ Alternately, you can disable both of the above settings using `__dangerous__inse
   __dangerous__insecure: true
 ```
 
-### User agent
-
-Requests made to the GitHub API must include a valid User-Agent header (see [User Agent required](https://developer.github.com/v3/#user-agent-required)). It is recommended to use your GitHub username here:
-
-```yaml
-user-agent: your-github-username
-```
-
 ### Notifications
 
 You can add services to send downtime notifications to, such as SMS, Slack, or email. For more information about notifications, visit the [Notifications docs](/docs/notifications) page. You can directly configure the notifications in repository secrets (environment variables).
@@ -260,4 +252,27 @@ By default, Upptime uses the official GitHub API to fetch data for your status p
 ```yaml
 status-website:
   apiBaseUrl: https://api.github.com
+```
+
+### CI schedule
+
+You can customize the schedule when Uptime workflows run by adding the `workflowSchedule` key in your configuration file. The default values and syntax is like so:
+
+```yaml
+workflowSchedule:
+  graphs: "0 0 * * *"
+  responseTime: "0 23 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 0 * * *"
+  updateTemplate: "0 0 * * *"
+  updates: "0 3 * * *"
+  uptime: "*/5 * * * *"
+```
+
+### User agent
+
+Requests made to the GitHub API must include a valid User-Agent header (see [User Agent required](https://developer.github.com/v3/#user-agent-required)). It is recommended to use your GitHub username here:
+
+```yaml
+user-agent: your-github-username
 ```
