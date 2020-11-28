@@ -42,6 +42,16 @@ For each notification type (Slack, email, etc.), you need to first enable it by 
 
 To create a Slack webhook URL, see the article [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack) on the Slack website.
 
+### Telegram
+
+| Environment variable               | Value               |
+| ---------------------------------- | ------------------- |
+| `NOTIFICATION_TELEGRAM`            | Set to `true`       |
+| `NOTIFICATION_TELEGRAM_BOT_KEY`    | Your bot key        |
+| `NOTIFICATION_TELEGRAM_CHAT_ID`    | Your `@username`    |
+
+To create a Telegram bot key, see the documentation for [Botfather](https://core.telegram.org/bots#6-botfather) on the Discord Support website.
+
 ### Discord
 
 | Environment variable               | Value               |
