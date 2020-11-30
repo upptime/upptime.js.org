@@ -44,6 +44,8 @@ sites:
     url: https://duckduckgo.com
 ```
 
+#### HTTP verbs
+
 To make POST requests (or any other HTTP verb), you can add the method key:
 
 ```yaml
@@ -55,6 +57,8 @@ sites:
     url: https://example.com
     method: DELETE
 ```
+
+#### Secret URLs
 
 If you don't want to show a URL publicly, you can use repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)). Instead of the plain text URL, add the name of the secret prefixed with a $ character:
 
@@ -72,6 +76,8 @@ You can also use these secrets as part of the URL, for example:
   url: https://example.com/get-user/3?api_key=$SECRET_SITE_2
 ```
 
+#### Request headers
+
 Similarly, you can set headers in a request like so:
 
 ```yaml
@@ -81,6 +87,8 @@ Similarly, you can set headers in a request like so:
     - "Authorization: Bearer $SECRET_SITE_2"
     - "Content-Type: application/json"
 ```
+
+#### Status codes
 
 If you, for example, expect a `404` response (which is traditionally an error response), you can set it as `expectedStatusCodes` to mark your site as up. By default, all 20x and 30x responses are as `expectedStatusCodes`:
 
@@ -93,6 +101,20 @@ sites:
       - 201
       - 404
 ```
+
+#### Maximum response time
+
+Upptime endpoints can be up, down, or degraded. By default, if an endpoint takes more than 30 seconds to respond, its performance is tracked as "degraded". You can customize the maximum response time:
+
+```yaml
+- name: Slow endpoint
+  url: https://example.com
+  maxResponseTime: 5000
+```
+
+In the above example, this endpoint will be measured as degraded if it takes more than 5 seconds to respond.
+
+#### Self-signed SSL certificates
 
 If you're using a self-signed SSL certificate, you can set the `__dangerous__disable_verify_peer` option to `true` to skip verifying the certificate:
 
