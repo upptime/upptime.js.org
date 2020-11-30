@@ -48,7 +48,7 @@ To create a Slack webhook URL, see the article [Incoming webhooks for Slack](htt
 | ---------------------------------- | ------------------- |
 | `NOTIFICATION_TELEGRAM`            | Set to `true`       |
 | `NOTIFICATION_TELEGRAM_BOT_KEY`    | Your bot key        |
-| `NOTIFICATION_TELEGRAM_CHAT_ID`    | Your `@username`    |
+| `NOTIFICATION_TELEGRAM_CHAT_ID`    | Your chat ID        |
 
 To create a Telegram bot key, see the documentation for [Botfather](https://core.telegram.org/bots#6-botfather) on the Discord Support website.
 
