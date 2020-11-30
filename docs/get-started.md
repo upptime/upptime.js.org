@@ -10,7 +10,7 @@ You can click on the following link to generate a repository using the template:
 
 1. Visit the Upptime repository on GitHub: https://github.com/upptime/upptime
 1. Click on the "Use this template" button on the top-right
-1. Enter a name for your new repository
+1. Enter a name for your new repository and check "Include all branches"
 1. Click on "Create repository from template"
 
 For more details on how to create repositories using template, read the article on the GitHub website: [Creating a repository from a template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
