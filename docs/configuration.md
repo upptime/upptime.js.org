@@ -88,6 +88,21 @@ Similarly, you can set headers in a request like so:
     - "Content-Type: application/json"
 ```
 
+#### Request body
+
+If you want to send data alongside the headers, you can use the `body` key:
+
+```yaml
+- name: API endpoint with data
+  method: POST
+  url: https://example.com/login
+  headers:
+    - "Content-Type: application/json"
+  body: '{ "password": "hello" }'
+```
+
+You can add any string to the `body` parameter, but make sure that you supply the relevant content-type header too.
+
 #### Status codes
 
 If you, for example, expect a `404` response (which is traditionally an error response), you can set it as `expectedStatusCodes` to mark your site as up. By default, all 20x and 30x responses are as `expectedStatusCodes`:
