@@ -17,7 +17,7 @@ Using GitHub Actions, users can [schedule](https://docs.github.com/en/free-pro-t
 
 We also record the response time once per day and commit it to git history. This way, we can graph long-term trends in your websites' response times by going through git commit history. We generate these graphs once every day, also using schedulers.
 
-You can see an [example issue #67](https://github.com/upptime/upptime/issues/67).
+You can see [example commit history](https://github.com/upptime/upptime/commits/master/history/wikipedia.yml).
 
 ### GitHub Issues-powered incident reports
 
@@ -25,7 +25,7 @@ When a specified endpoint goes down, Upptime automatically opens a new issue in 
 
 To add information about an incident, you can add comments to the issue. By default, issues will be locked, so only your team members are allowed to comment on them. When your website comes back up, the issue will be automatically closed.
 
-You can see [example commit history](https://github.com/upptime/upptime/commits/master/history/wikipedia.yml).
+You can see an [example issue #67](https://github.com/upptime/upptime/issues/67).
 
 ### GitHub Pages-powered status website
 
