@@ -155,6 +155,19 @@ Alternately, you can disable both of the above settings using `__dangerous__inse
   __dangerous__insecure: true
 ```
 
+#### Custom status detection
+
+In some cases, your endpoint may return a 200 response but you show the user an error message. This is not a recommended approach, but you can add custom strings to check for.
+
+```yaml
+sites:
+  - name: Custom down
+    url: https://example.com
+    __dangerous__body_down: "File not found"
+```
+
+In the above example, if the body HTML response includes the string "File not found", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded` to mark the site as "degraded" instead.
+
 ### Notifications
 
 You can add services to send downtime notifications to, such as SMS, Slack, or email. For more information about notifications, visit the [Notifications docs](/docs/notifications) page. You can directly configure the notifications in repository secrets (environment variables).
