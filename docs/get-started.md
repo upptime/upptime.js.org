@@ -51,7 +51,9 @@ After generating your token, copy it (you will not see it again). Then, add it a
 2. In the left sidebar, click "Secrets"
 3. Press the button "Add a new secret"
 4. Enter the name of the secret as `GH_PAT`
-5. Paste your personal access token and click "Add secret"
+5. Paste your personal access token into the Value field
+6. Be sure there are no spaces before or after the token and/or linebreaks after your token
+7. Save your PAT by selecting "Add secret"
 
 For more information on PATs, read article on the GitHub website: [Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
