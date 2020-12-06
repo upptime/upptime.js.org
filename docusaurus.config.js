@@ -8,7 +8,7 @@ module.exports = {
   organizationName: "upptime",
   projectName: "upptime.js.org",
   themeConfig: {
-    googleAnalytics: {
+    gtag: {
       trackingID: "G-TYJM49782H",
     },
     algolia: {
