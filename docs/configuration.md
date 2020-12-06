@@ -192,7 +192,9 @@ sites:
       - AnandChowdhary
 ```
 
-### Branding
+### Status website
+
+#### Branding
 
 A static website with PWA is also generated, and you can customize the logo and name in the navbar:
 
@@ -202,7 +204,7 @@ status-website:
   logoUrl: https://example.com/image.jpg
 ```
 
-### Custom domain
+#### Custom domain
 
 If you want to add a custom domain, you can add the cname key:
 
@@ -223,7 +225,7 @@ status-website:
 
 Then, your status page may be hosted on https://user.github.io/repo/, where `user` is your GitHub username and `repo` is your repository name.
 
-### Navbar links
+#### Navbar links
 
 You can customize the navbar by adding or removing top-level navigation links.
 
@@ -236,7 +238,7 @@ status-website:
       href: https://github.com/$OWNER/$REPO
 ```
 
-### Intro text
+#### Intro text
 
 Optionally, you can add some introductory text to the website. You can use Markdown:
 
@@ -244,6 +246,52 @@ Optionally, you can add some introductory text to the website. You can use Markd
 status-website:
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a sample status page which uses **real-time** data from our [Github repository](https://github.com/koj-co/upptime). No server required — just GitHub Actions, Issues, and Pages.
+```
+
+#### Custom JavaScript
+
+You can add custom scripts:
+
+```yaml
+status-website:
+  scripts:
+    - src: https://example.com/script.js
+    - src: https://example.com/script-2.js
+      async: true
+```
+
+Or, directly add inline JS:
+
+```yaml
+status-website:
+  js: "window.onload = function() { alert('Hello!') }"
+```
+
+#### Custom CSS
+
+You can add custom stylesheets:
+
+```yaml
+status-website:
+  links:
+    - rel: stylesheet
+      hred: https://example.com/custom-styles.css
+```
+
+Or, directly add inline CSS:
+
+```yaml
+status-website:
+  css: "body { opacity: 0.5 }"
+```
+
+#### Custom API base URL
+
+By default, Upptime uses the official GitHub API to fetch data for your status page website. If you have a proxy API (perhaps using a personal access token with readonly access to your private repository), you can set the `apiBaseUrl` key under `status-website`:
+
+```yaml
+status-website:
+  apiBaseUrl: https://api.github.com
 ```
 
 ### Internationalization
@@ -257,7 +305,7 @@ i18n:
   # ...
 ```
 
-You can, for example, change the footer copyright text by changing the internationalization key.
+You can, for example, change the footer copyright text by changing the internationalization key for `footer`. These i18n keys are also used for your README.md file.
 
 ### Repository metadata
 
@@ -293,15 +341,6 @@ By default, these commits are done by [Upptime Bot](https://github.com/upptime-b
 commitMessages:
   commitAuthorName: "Upptime Bot"
   commitAuthorEmail: "upptime@koj.co"
-```
-
-### Custom API base URL
-
-By default, Upptime uses the official GitHub API to fetch data for your status page website. If you have a proxy API (perhaps using a personal access token with readonly access to your private repository), you can set the `apiBaseUrl` key under `status-website`:
-
-```yaml
-status-website:
-  apiBaseUrl: https://api.github.com
 ```
 
 ### CI schedule
