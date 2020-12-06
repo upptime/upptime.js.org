@@ -67,13 +67,13 @@ If you don't want to show a URL publicly, you can use repository secrets (see [C
   url: $SECRET_SITE
 ```
 
-In the above example, a secret named SECRET_SITE (without the $) is stored in the repository. You can add up to 10 additional secret sites, like `$SECRET_SITE_1`, `$SECRET_SITE_2`, `$SECRET_SITE_3`, etc.
+In the above example, a secret named `SECRET_SITE` (without the $) is stored in the repository. You can add as many secrets as you like, and use them in URLs by adding the `$` prefix. For example, if your environment variable is called `API_URL`, the site URL can be `$API_URL`.
 
-You can also use these secrets as part of the URL, for example:
+You can also use these secrets as part of the URL, for example using a secret called `MY_API_KEY`:
 
 ```yaml
 - name: API endpoint
-  url: https://example.com/get-user/3?api_key=$SECRET_SITE_2
+  url: https://example.com/get-user/3?api_key=$MY_API_KEY
 ```
 
 #### Request headers
@@ -102,6 +102,17 @@ If you want to send data alongside the headers, you can use the `body` key:
 ```
 
 You can add any string to the `body` parameter, but make sure that you supply the relevant content-type header too.
+
+#### Custom icons
+
+Each API endpoint has an icon visible on the README.md file and the status website. By default, we use the GitHub Favicon Service to fetch the favicon for the domain of your endpoint (with a fallback to a generic globe icon), but you can also provide a custom icon URL, preferably a transparent square PNG:
+
+```yaml
+sites:
+  - name: Google
+    url: https://www.google.com
+    icon: https://www.google.com/favicon.ico
+```
 
 #### Status codes
 
