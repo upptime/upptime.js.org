@@ -286,7 +286,7 @@ You can add custom stylesheets:
 status-website:
   links:
     - rel: stylesheet
-      hred: https://example.com/custom-styles.css
+      href: https://example.com/custom-styles.css
 ```
 
 Or, directly add inline CSS:
