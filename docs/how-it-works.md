@@ -17,7 +17,7 @@ Using GitHub Actions, users can [schedule](https://docs.github.com/en/free-pro-t
 
 We also record the response time once per day and commit it to git history. This way, we can graph long-term trends in your websites' response times by going through git commit history. We generate these graphs once every day, also using schedulers.
 
-You can see an [example issue #15](https://github.com/upptime/upptime/issues/67).
+You can see an [example issue #67](https://github.com/upptime/upptime/issues/67).
 
 ### GitHub Issues-powered incident reports
 
