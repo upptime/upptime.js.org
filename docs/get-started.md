@@ -36,7 +36,7 @@ If you don't want to have a publicly-available status website, you don't have to
 
 All sensitive information required, such as API keys, are provided as environment variables. These are stored as GitHub repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)).
 
-To make commits and publish your website, Upptime requires a personal access token (PAT) with the `repo` and `workflow` scope, stored as a the repository secret `GH_PAT`. You can create a personal access token by following these steps:
+To make commits and publish your website, Upptime requires a personal access token (PAT) with the `repo` and `workflow` scope, stored as a repository secret `GH_PAT`. You can create a personal access token by following these steps:
 
 1. Click on your profile picture on the top-right corner and select "Settings"
 2. In the left sidebar, select "Developer settings"
@@ -59,7 +59,7 @@ For more information on PATs, read article on the GitHub website: [Creating a pe
 
 ### Update configuration
 
-The `.upptimerc.yml` file is used as the central configuration store. In that file, you can specify which endpoints you want to monitory and configure your status website. For more information, visit [Configuration](/docs/configuration).
+The `.upptimerc.yml` file is used as the central configuration store. In that file, you can specify which endpoints you want to monitor and configure your status website. For more information, visit [Configuration](/docs/configuration).
 
 You can start by adding your endpoints under `sites`:
 
