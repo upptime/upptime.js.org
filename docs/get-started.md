@@ -49,7 +49,7 @@ After generating your token, copy it (you will not see it again). Then, add it a
 
 1. In your Upptime repository, select "Settings"
 2. In the left sidebar, click "Secrets"
-3. Press the button "Add a new secret"
+3. Press the button "New repository secret"
 4. Enter the name of the secret as `GH_PAT`
 5. Paste your personal access token into the Value field
 6. Be sure there are no spaces before or after the token and/or linebreaks after your token
