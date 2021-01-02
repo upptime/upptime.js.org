@@ -318,6 +318,8 @@ i18n:
 
 You can, for example, change the footer copyright text by changing the internationalization key for `footer`. These i18n keys are also used for your README.md file.
 
+Similarly, you can also localize the `README.md` file by adding these to the same `i18n.yml` file: [List of README.md strings](https://github.com/upptime/upptime/discussions/161#discussioncomment-256389).
+
 ### Repository metadata
 
 If you've just set up your new repository and don't have repository metadata (like description, topics, and homepage), Upptime will update that for you. It will update the metadata as follows:
