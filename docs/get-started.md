@@ -26,7 +26,7 @@ To get a static status website, you have to enable GitHub Pages on your new repo
 1. Go to your repository settings page
 1. Scroll to "GitHub Pages" settings
 1. Under "Source", change "None" to `gh-pages`
-1. In the folder dropdown, select `/docs`
+1. In the folder dropdown, select `/(root)`
 1. Skip the "Theme Chooser" option 
 1. Click on "Save"
 
