@@ -36,6 +36,11 @@ module.exports = {
           position: "left",
         },
         {
+          href: "/blog/",
+          label: "Blog",
+          position: "left",
+        },
+        {
           href: "https://demo.upptime.js.org",
           label: "Example website",
           position: "left",
@@ -63,6 +68,10 @@ module.exports = {
               to: "docs/",
             },
             {
+              label: "Upptime Blog",
+              to: "/blog/",
+            },
+            {
               label: "Getting started",
               to: "docs/get-started",
             },
@@ -80,6 +89,10 @@ module.exports = {
           title: "Support",
           items: [
             {
+              label: "Start a discussion",
+              to: "https://github.com/upptime/upptime/discussions",
+            },
+            {
               label: "Open an issue",
               to: "https://github.com/upptime/upptime/issues",
             },
@@ -93,7 +106,7 @@ module.exports = {
             },
             {
               label: "Contributing",
-              to: "/docs/contributing",
+              to: "docs/contributing",
             },
           ],
         },
@@ -153,6 +166,11 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        blog: {
+          feedOptions: {
+            type: "all",
+          },
         },
       },
     ],
