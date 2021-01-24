@@ -67,7 +67,7 @@ If you don't want to show a URL publicly, you can use repository secrets (see [C
   url: $SECRET_SITE
 ```
 
-In the above example, a secret named `SECRET_SITE` (without the $) is stored in the repository. You can add as many secrets as you like, and use them in URLs by adding the `$` prefix. For example, if your environment variable is called `API_URL`, the site URL can be `$API_URL`.
+In the above example, a secret named `SECRET_SITE` (without the $) is stored in the repository. You can add as many secrets as you like, and use them in URLs by adding the `$`prefix. For example, if your environment variable is called`API_URL`, the site URL can be `$API_URL`.
 
 You can also use these secrets as part of the URL, for example using a secret called `MY_API_KEY`:
 
@@ -205,6 +205,37 @@ sites:
 
 ### Status website
 
+#### Theme
+
+You can select one of many themes available to customize your status website:
+
+```yaml
+status-website:
+  theme: light
+```
+
+Available themes are `light`, `dark`, or `ocean`.
+
+You can also write your own custom theme by creating a CSS file in the `static/` directory of your Upptime repository. For example, if you create a file `static/my-custom-theme.css`, you can use CSS variables to style your theme. To see a list of all available variables, see the [`dark.css` theme](https://github.com/upptime/status-page/blob/HEAD/static/themes/dark.css):
+
+```css
+:root {
+  --body-background-color: #001716;
+  --body-text-color: #f0ffff;
+  --card-background-color: #002b29;
+  --nav-background-color: #002b29;
+  --nav-border-bottom-color: #015450;
+}
+/* . . . */
+```
+
+Then, this file will be available at https://example.com/my-custom-theme.css. All files from the `static` directory are served as-is, so you can use this URL to specify your new theme using `themeUrl`:
+
+```yaml
+status-website:
+  themeUrl: https://example.com/my-custom-theme.css
+```
+
 #### Branding
 
 A static website with PWA is also generated, and you can customize the logo and name in the navbar:
@@ -259,6 +290,26 @@ status-website:
   introMessage: This is a sample status page which uses **real-time** data from our [Github repository](https://github.com/koj-co/upptime). No server required — just GitHub Actions, Issues, and Pages.
 ```
 
+#### Custom favicons
+
+You can add a custom favicon in both SVG and PNG formats:
+
+```yaml
+status-website:
+  favicon: https://example.com/favicon.png
+  faviconSvg: https://example.com/logo.svg
+```
+
+#### Custom HTML
+
+To add any custom HTML (unsanitized), you can use `customHeadHtml` and `customBodyHtml`:
+
+```yaml
+status-website:
+  customHeadHtml: "<!-- Custom HTML to add in the <head> tag -->"
+  customBodyHtml: "<!-- Custom HTML to add at the beginning of <body> -->"
+```
+
 #### Custom JavaScript
 
 You can add custom scripts:
@@ -294,6 +345,27 @@ Or, directly add inline CSS:
 ```yaml
 status-website:
   css: "body { opacity: 0.5 }"
+```
+
+#### Custom meta tags
+
+To add any custom meta tags, you can use a syntax similar to the `links`:
+
+```yaml
+status-website:
+  metaTags:
+    - name: "color-scheme"
+      content: "dark light"
+    - name: "robots"
+      content: "noindex"
+```
+
+#### Custom robots.txt files
+
+You might want to have custom search engine indexing rules:
+
+```yaml
+robotsText: "User-agent: * \n Disallow: /"
 ```
 
 #### Custom API base URL
@@ -369,6 +441,14 @@ workflowSchedule:
   updateTemplate: "0 0 * * *"
   updates: "0 3 * * *"
   uptime: "*/5 * * * *"
+```
+
+### Self-hosted runners
+
+You may want to use a self-hosted runner instead of the publicly available GitHub runners in your project for more accurate uptime monitoring (ensuring scheduled workflows run on time) or to save build minutes. You can specify your self-hosted runner like so:
+
+```yaml
+runner: [self-hosted, linux, ARM64]
 ```
 
 ### User agent
