@@ -216,7 +216,7 @@ status-website:
 
 Available themes are `light`, `dark`, or `ocean`.
 
-You can also write your own custom theme by creating a CSS file in the `static/` directory of your Upptime repository. For example, if you create a file `static/my-custom-theme.css`, you can use CSS variables to style your theme. To see a list of all available variables, see the [`dark.css` theme](https://github.com/upptime/status-page/blob/HEAD/static/themes/dark.css):
+You can also write your own custom theme by creating a CSS file in the `assets/` directory of your Upptime repository. For example, if you create a file `assets/my-custom-theme.css`, you can use CSS variables to style your theme. To see a list of all available variables, see the [`dark.css` theme](https://github.com/upptime/status-page/blob/HEAD/static/themes/dark.css):
 
 ```css
 :root {
@@ -229,7 +229,7 @@ You can also write your own custom theme by creating a CSS file in the `static/`
 /* . . . */
 ```
 
-Then, this file will be available at https://example.com/my-custom-theme.css. All files from the `static` directory are served as-is, so you can use this URL to specify your new theme using `themeUrl`:
+Then, this file will be available at https://example.com/my-custom-theme.css. All files from the `assets` directory are served as-is, so you can use this URL to specify your new theme using `themeUrl`:
 
 ```yaml
 status-website:
