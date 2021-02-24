@@ -15,6 +15,8 @@ You can click on the following link to generate a repository using the template:
 
 For more details on how to create repositories using template, read the article on the GitHub website: [Creating a repository from a template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
 
+**Billing note:** Upptime uses thousands of build minutes every month (approximately 3,000 minutes in the default setting). If you use a public repository, GitHub offers unlimited free build minutes, but if you use a private repository, you'll have to pay for this time.
+
 ## After creating your repository
 
 The following steps apply to your new repository, not the upptime/upptime template repository.
