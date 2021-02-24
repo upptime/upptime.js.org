@@ -3,6 +3,7 @@ module.exports = {
     "how-it-works",
     "get-started",
     "configuration",
+    "scheduled-maintenance",
     "triggers",
     "notifications",
     "badges",
