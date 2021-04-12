@@ -453,7 +453,7 @@ runner: [self-hosted, linux, ARM64]
 
 ### User agent
 
-Requests made to the GitHub API must include a valid User-Agent header (see [User Agent required](https://developer.github.com/v3/#user-agent-required)). It is recommended to use your GitHub username here:
+Requests made to the GitHub API must include a valid User-Agent header (see [User Agent required](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#user-agent-required)). It is recommended to use your GitHub username here:
 
 ```yaml
 user-agent: your-github-username
