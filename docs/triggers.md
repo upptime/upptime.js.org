@@ -36,6 +36,10 @@ This workflow records the reponse time of each endpoint and commits it to git hi
 
 This workflow also runs once every day and updates the README of your project with a summary of the response times and generated graphs. You can manually trigger it to update your project's README.md file.
 
+### Updates CI
+
+{{ I don't know what this workflow does, just noticed it was missing from the documentation. }}
+
 ## Manual triggers
 
 To manually trigger an update, you can use the GitHub UI or API.
