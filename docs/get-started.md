@@ -26,7 +26,7 @@ The following steps apply to your new repository, not the upptime/upptime templa
 To get a static status website, you have to enable GitHub Pages on your new repository.
 
 1. Go to your repository settings page
-1. Scroll to "GitHub Pages" settings
+1. Go to the "Pages" sub-section on the left
 1. Under "Source", change "None" to `gh-pages`
 1. In the folder dropdown, select `/(root)`
 1. Skip the "Theme Chooser" option 
