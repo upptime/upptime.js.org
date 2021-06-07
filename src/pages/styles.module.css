@@ -15,6 +15,12 @@
   .heroBanner {
     padding: 2rem;
   }
+  .getStarted {
+    padding: 0.4em;
+  }
+  .buttons {
+    margin: 2px;
+  }
 }
 
 .buttons {
