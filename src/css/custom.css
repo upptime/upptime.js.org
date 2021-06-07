@@ -85,3 +85,10 @@ iframe {
   margin-top: 2rem;
   font-style: italic;
 }
+
+@media screen and (max-width: 966px) {
+  .real {
+    margin-bottom: 0.3rem;
+    margin-top: 1.5rem;
+  }
+}
