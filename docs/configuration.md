@@ -430,7 +430,7 @@ commitMessages:
 
 ### CI schedule
 
-You can customize the schedule when Uptime workflows run by adding the `workflowSchedule` key in your configuration file. The default values and syntax is like so:
+You can customize the schedule when Uptime workflows run by adding the `workflowSchedule` key in your configuration file. The syntax followed is that of `cron`. Click [here](https://www.freeformatter.com/cron-expression-generator-quartz.html) for more information on `cron`. The default values are like so:
 
 ```yaml
 workflowSchedule:
