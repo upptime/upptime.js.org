@@ -58,6 +58,22 @@ sites:
     method: DELETE
 ```
 
+#### TCP Port Enpoints
+
+To make a TCP ping to any port, you can add the check key "tcp-ping":
+
+```yaml
+sites:
+  - name: Google DNS 1
+    check: "tcp-ping"
+    url: 8.8.4.4
+    port: 53
+  - name: Google DNS 2
+    check: "tcp-ping"
+    url: 8.8.8.8
+    port: 53
+```
+
 #### Secret URLs
 
 If you don't want to show a URL publicly, you can use repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)). Instead of the plain text URL, add the name of the secret prefixed with a $ character:
