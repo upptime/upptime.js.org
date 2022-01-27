@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Upptime Blog</title>
+        <link>https://upptime.js.org/blog</link>
+        <description>Upptime Blog</description>
+        <lastBuildDate>Fri, 22 Jan 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[GitHub Actions workflow not triggering at scheduled time]]></title>
+            <link>https://upptime.js.org/blog/2021/01/22/github-actions-schedule-not-working</link>
+            <guid>GitHub Actions workflow not triggering at scheduled time</guid>
+            <pubDate>Fri, 22 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[We've seen many reports of GitHub Actions workflows not triggering at the scheduled time. In fact, in the official upptime/upptime repository, workflows scheduled for every five minutes run as slower as once every hour. This blog post is a quick summary of what we know, and what you can do.]]></description>
+        </item>
+    </channel>
+</rss>
