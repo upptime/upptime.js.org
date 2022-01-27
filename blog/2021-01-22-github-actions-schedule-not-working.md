@@ -8,7 +8,7 @@ tags: [uptime-monitor, github-actions]
 hide_table_of_contents: false
 ---
 
-We've seen many reports of GitHub Actions workflows not triggering at the scheduled time. In fact, in the official [upptime/upptume](https://github.com/upptime/upptume) repository, workflows scheduled for every five minutes run as slower as once every hour. This blog post is a quick summary of what we know, and what you can do.
+We've seen many reports of GitHub Actions workflows not triggering at the scheduled time. In fact, in the official [upptime/upptime](https://github.com/upptime/upptime) repository, workflows scheduled for every five minutes run as slower as once every hour. This blog post is a quick summary of what we know, and what you can do.
 
 <!--truncate-->
 
