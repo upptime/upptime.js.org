@@ -2,7 +2,7 @@
 title: Notifications
 ---
 
-Using notifications, you can alert your team when an endpoint goes down or experiences degraded performance. To add notifications, you have to add environment variables as GitHub repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)).
+Using notifications, you can alert your team when an endpoint goes down or experiences degraded performance. To add notifications, you have to add environment variables as **GitHub repository secrets** (*Settings* -> *Secrets* -> *Actions*) and add *Environment variable* as your *Secret name* and *Value* in environment variable as *value* in secret (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)).
 
 Every time an endpoint goes down, a notification with the following text is sent:
 
