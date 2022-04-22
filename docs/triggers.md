@@ -58,11 +58,15 @@ If you want to programmatically trigger updates, you can use the GitHub REST API
 
 ```bash
 curl \
-  -X POST \
-  -H "Accept: application/vnd.github.v3+json" \
-  https://api.github.com/repos/user/repo/dispatches \
-  -d '{ "event_type": "setup" }'
-```
+-X POST \
+-H "Accept: application/vnd.github.v3+json" \
+-H "Authorization: token {YOUR GITHUB TOKEN}" \
+https://api.github.com/repos/{YOUR GITHUB USERNAME}/{YOUR UPPTIME REPO NAME}/dispatches \
+-d '{"event_type":"setup"}'                                                                                                                   ```
+To get your gitub token, simply go to settings -> Developer settings -> Personal access tokens -> generate new token
+
+Type any note or name you wish, and set Expiration to anything you wish too (*I recommend make it never expire*) and in "Select scopes" select on *workflow* and generate your new token and save it somewhere safe
+
 
 Or, with JavaScript ([@octokit/core.js](https://github.com/octokit/core.js)):
 
@@ -74,4 +78,4 @@ await octokit.request("POST /repos/{owner}/{repo}/dispatches", {
 });
 ```
 
-For more information, read this article on the GitHub website: [Create a repository dispatch event](https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#create-a-repository-dispatch-event).
+For more information, read this article on the GitHub website: [Create a repository dispatch event](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow).
