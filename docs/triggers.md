@@ -74,4 +74,4 @@ await octokit.request("POST /repos/{owner}/{repo}/dispatches", {
 });
 ```
 
-For more information, read this article on the GitHub website: [Create a repository dispatch event](https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#create-a-repository-dispatch-event).
+For more information, read this article on the GitHub website: [Create a repository dispatch event](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow).
