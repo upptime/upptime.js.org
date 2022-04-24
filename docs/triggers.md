@@ -62,7 +62,8 @@ curl \
 -H "Accept: application/vnd.github.v3+json" \
 -H "Authorization: token {YOUR GITHUB TOKEN}" \
 https://api.github.com/repos/{YOUR GITHUB USERNAME}/{YOUR UPPTIME REPO NAME}/dispatches \
--d '{"event_type":"setup"}'                                                                                                                   ```
+-d '{"event_type":"setup"}'                                                                                                                   
+```
 To get your gitub token, simply go to settings -> Developer settings -> Personal access tokens -> generate new token
 
 Type any note or name you wish, and set Expiration to anything you wish too (*I recommend make it never expire*) and in "Select scopes" select on *workflow* and generate your new token and save it somewhere safe
