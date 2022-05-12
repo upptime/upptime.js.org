@@ -24,7 +24,8 @@ The following steps apply to your new repository, not the upptime/upptime templa
 
 ### Enable publishing
 
-To get a static status website, you have to enable GitHub Pages on your new repository.
+To get a static status website, you have to enable GitHub Pages on your new repository.  
+Usually, GitHub will enable GitHub Pages as soon as a `gh-pages` branch is detected. If this doesn't happen should you do the following steps.
 
 1. Go to your repository settings page
 1. Go to the "Pages" sub-section on the left
@@ -47,13 +48,15 @@ To make commits and publish your website, Upptime requires a personal access tok
 2. In the left sidebar, select "Developer settings"
 3. In the left sidebar, click "Personal access tokens"
 4. Click "Generate new token"
+5. Give your token a specific distinct name
+6. In the "Expiration" dropdown, select "No expiration"
 5. Select the "repo" and "workflow" scopes
 6. Click "Generate token"
 
 After generating your token, copy it (you will not see it again). Then, add it as a repository secret:
 
 1. In your Upptime repository, select "Settings"
-2. In the left sidebar, click "Secrets"
+2. In the left sidebar, click "Secrets" followed by "Actions"
 3. Press the button "New repository secret"
 4. Enter the name of the secret as `GH_PAT`
 5. Paste your personal access token into the Value field
@@ -81,7 +84,7 @@ status-website: # Status website (optional)
   name: Upptime # Status website title
 ```
 
-If you're not using a custom domain, you can remove the line starting with `cname:` and instead add the GitHub repository name:
+If you're not using a custom domain, you can remove the line starting with `cname:` and instead add the GitHub repository name using the `baseUrl:` setting:
 
 ```yaml
 status-website:
