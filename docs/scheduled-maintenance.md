@@ -6,8 +6,8 @@ Upptime helps you set up scheduled maintenance times by opening issues manually.
 
 ```html
 <!--
-start: 2021-02-24T13:00:00.220Z
-end: 2021-02-24T14:00:00.220Z
+start: 2021-02-24T13:00:00+00:00
+end: 2021-02-24T14:00:00+00:00
 expectedDown: google, hacker-news
 -->
 ```
