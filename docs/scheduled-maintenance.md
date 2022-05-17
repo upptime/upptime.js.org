@@ -12,8 +12,7 @@ expectedDown: google, hacker-news
 -->
 ```
 
-The `start` and `end` keys are mandatory and should contain an ISO datetime with the start and ending time for the scheduled maintenance respectively.  
-Examples of valid ISO times:
+The `start` and `end` keys are mandatory and should contain an ISO datetime with the start and ending time for the scheduled maintenance respectively.
 
 If you expect that an endpoint will go down during this time, you can add it to `expectedDown` and Upptime will not open an issue if it goes down within this time period. Similarly, you can add `expectedDegraded` if you expect degraded performance. Both these keys should have comma-separated list of slugs.
 
