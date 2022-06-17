@@ -195,7 +195,7 @@ sites:
 
 In the above example, if the body HTML response includes the string "File not found", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded` to mark the site as "degraded" instead.
 
-In other cases your endpoint may return a 200 response with a success code in the body. You might want to check for a specific success message in the body:
+In other cases your endpoint may return a 200 response with a success message in the body. You might want to check for a specific success message in the body:
 
 ```yaml
 sites:
