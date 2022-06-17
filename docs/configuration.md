@@ -195,6 +195,17 @@ sites:
 
 In the above example, if the body HTML response includes the string "File not found", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded` to mark the site as "degraded" instead.
 
+In other cases your endpoint may return a 200 response with a success code in the body. You might want to check for a specific success message in the body:
+
+```yaml
+sites:
+  - name: Custom up
+    url: https://example.com/api/system/status
+    __dangerous__body_down_if_text_missing: '"status":"UP"'
+```
+
+In the above example, if the body HTML response does **not** include "status":"UP", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded_if_text_missing` to mark the site as "degraded" instead.
+
 ### Notifications
 
 You can add services to send downtime notifications to, such as SMS, Slack, or email. For more information about notifications, visit the [Notifications docs](/docs/notifications) page. You can directly configure the notifications in repository secrets (environment variables).
