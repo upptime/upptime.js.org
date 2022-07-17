@@ -69,7 +69,7 @@ For more information on PATs, read article on the GitHub website: [Creating a pe
 
 The `.upptimerc.yml` file is used as the central configuration store. In that file, you can specify which endpoints you want to monitor and configure your status website. For more information, visit [Configuration](/docs/configuration).
 
-You can start by adding your endpoints under `sites`:
+You can start by setting the owner and repo, and adding your endpoints under `sites`:
 
 ```yaml title=".upptimerc.yml"
 owner: koj-co # GitHub username
