@@ -459,6 +459,8 @@ commitMessages:
 
 You can customize the schedule when Uptime workflows run by adding the `workflowSchedule` key in your configuration file. The default values and syntax is like so:
 
+Keep in mind that a scheduled GitHub Action cannot run faster than every 5 minutes.
+
 ```yaml
 workflowSchedule:
   graphs: "0 0 * * *"
