@@ -62,6 +62,15 @@ To create a Telegram bot key, see the documentation for [Botfather](https://core
 
 To create a Discord webhook URL, see the article [Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) on the Discord Support website.
 
+### Microsoft Teams
+
+| Environment variable             | Value               |
+| -------------------------------- | ------------------- |
+| `NOTIFICATION_TEAMS`             | Set to `true`       |
+| `NOTIFICATION_TEAMS_WEBHOOK_URL` | Teams webhook URL   |
+
+To create a Microsoft Teams webhook URL, see the article [Create Incoming Webhooks](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) on the Microsoft Learn website.
+
 ### Email
 
 To send an email, you can use SMTP or a hosted service such as AWS SES, Sendgrid, Sparkpost, or Mailgun.
