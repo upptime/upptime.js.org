@@ -457,7 +457,7 @@ commitMessages:
 
 ### CI schedule
 
-You can customize the schedule when Uptime workflows run by adding the `workflowSchedule` key in your configuration file. The default values and syntax is like so:
+You can customize the schedule when Uptime workflows run by adding the `workflowSchedule` key in your configuration file. The syntax followed is that of [`cron`](https://en.wikipedia.org/wiki/cron). The default values are like so:
 
 Keep in mind that a scheduled GitHub Action cannot run faster than every 5 minutes.
 
