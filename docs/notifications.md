@@ -62,6 +62,19 @@ To create a Telegram bot key, see the documentation for [Botfather](https://core
 
 To create a Discord webhook URL, see the article [Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) on the Discord Support website.
 
+### Zulip
+
+| Environment variable               | Value                    |
+| ---------------------------------- | -------------------      |
+| `NOTIFICATION_ZULIP_MESSAGE_URL`   | Zulip Message API URL    |
+| `NOTIFICATION_ZULIP_API_EMAIL`     | Email of the Zulip bot   |
+| `NOTIFICATION_ZULIP_API_KEY`       | API Key of the Zulip bot |
+
+
+To create a Zulip Incoming Webhook bot, see the article [Add a bot or integration](https://zulip.com/help/add-a-bot-or-integration) in the Zulip docs. 
+The `NOTIFICATION_ZULIP_MESSAGE_URL` should include the `type`, `to` and `topic` query params and would look something like this:
+`https://domain.zulipchat.com/api/v1/messages?type=stream&to=general&topic=Upptime%20notifications`.
+
 ### Microsoft Teams
 
 | Environment variable             | Value               |
