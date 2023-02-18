@@ -54,28 +54,40 @@ You will see the message "This workflow has a `workflow_dispatch` event trigger.
 
 ### Using the GitHub API
 
-If you want to programmatically trigger updates, you can use the GitHub REST API's repository dispatch events by triggering an event in your repository called `setup`:
+If you want to programmatically trigger updates, you can use the GitHub REST API's repository dispatch events by triggering an event in your repository called `Uptime CI` located in the file `uptime.yml` (to trigger the Setup CI workflow, you change `uptime.yml` to `setup.yml`):
 
 ```bash
-curl \
--X POST \
--H "Accept: application/vnd.github.v3+json" \
--H "Authorization: token {YOUR GITHUB TOKEN}" \
-https://api.github.com/repos/{YOUR GITHUB USERNAME}/{YOUR UPPTIME REPO NAME}/dispatches \
--d '{"event_type":"setup"}'                                                                                                                   
-```
-To get your gitub token, simply go to settings -> Developer settings -> Personal access tokens -> generate new token
+ curl \
+   -X POST \
+   -H "Accept: application/vnd.github+json" \
+   -H "Authorization: Bearer {YOUR GITHUB TOKEN}" \
+   -H "X-GitHub-Api-Version: 2022-11-28" \
+   -d '{"ref": "master"}' \           
+   https://api.github.com/repos/{YOUR GITHUB USERNAME}/{YOUR UPPTIME REPO NAME}/actions/workflows/uptime.yml/dispatches
+   ```
+To get your GitHub token, simply go to settings -> Developer settings -> Personal access tokens. You have two options:
 
-Type any note or name you wish, and set Expiration to anything you wish too (*I recommend make it never expire*) and in "Select scopes" select on *workflow* and generate your new token and save it somewhere safe
+  * Fine-grained tokens or
+  * Tokens (classic)
 
+Fine-grained tokens may still be in beta when you use this. Once you choose one, select the "Generate new token" button.
+Fine grained tokens ae preferred as you can limit the token to a specific repository.
 
-Or, with JavaScript ([@octokit/core.js](https://github.com/octokit/core.js)):
+In either case Type any note or name you wish, and set Expiration to anything you wish too (*I recommend make it never expire*).
+
+  * If you are using the fine-grained token option, create a token with "Repository access" restricted to `{YOUR UPPTIME REPO NAME}`.
+     Once you have selected a repository, under "Repository permissions", set "Actions" to read and write permissions.
+  * If you are using the classic tokens,  in "Select scopes" select on *workflow*.
+
+Then generate your new token using the button at the bottom of the page and save it somewhere safe. 
+
+Or, with JavaScript ([@octokit/core.js](https://github.com/octokit/core.js)) (untested):
 
 ```js
-await octokit.request("POST /repos/{owner}/{repo}/dispatches", {
+await octokit.request("POST /repos/{owner}/{repo}/actions/workflows/uptime.yml/dispatches", {
   owner: "user",
   repo: "repo",
-  event_type: "setup",
+  ref: "master",
 });
 ```
 
