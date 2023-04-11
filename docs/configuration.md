@@ -392,7 +392,8 @@ status-website:
 You might want to have custom search engine indexing rules:
 
 ```yaml
-robotsText: "User-agent: * \n Disallow: /"
+status-website:
+  robotsText: "User-agent: * \n Disallow: /"
 ```
 
 #### Custom API base URL
