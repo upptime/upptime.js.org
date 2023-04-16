@@ -12,7 +12,7 @@ This package includes the uptime monitor that sends network requests to ensure t
 
 ## `@upptime/status-page`
 
-[![npm version](https://img.shields.io/npm/v/@upptime/status-page)](https://www.npmjs.com/package/@upptime/graphs) [![npm](https://img.shields.io/npm/dw/@upptime/status-page)](https://www.npmjs.com/package/@upptime/status-page) [![GitHub Repo stars](https://img.shields.io/github/stars/upptime/status-page)](https://github.com/upptime/status-page)
+[![npm version](https://img.shields.io/npm/v/@upptime/status-page)](https://www.npmjs.com/package/@upptime/status-page) [![npm](https://img.shields.io/npm/dw/@upptime/status-page)](https://www.npmjs.com/package/@upptime/status-page) [![GitHub Repo stars](https://img.shields.io/github/stars/upptime/status-page)](https://github.com/upptime/status-page)
 
 This package contains the source code of the status website written in Svelte using Sapper. Users don't directly interact with this package, rather the `@upptime/uptime-monitor` fetches the source code of the static site from here.
 
