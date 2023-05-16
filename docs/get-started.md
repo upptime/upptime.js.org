@@ -51,7 +51,7 @@ To make commits and publish your website, Upptime requires a personal access tok
 6. In the "Expiration" dropdown, select "90 days" or a custom, longer expiry
 7. In the "Resource Owner" section select the user or organization your Upptime repository belongs to
 8. In the "Repository Access" section select "Only select repositories" and select your Upptime repository
-9. In the "Permissions" > "Repository permissions" section enable read-write access to Actions, Contents and Workflows
+9. In the "Permissions" > "Repository permissions" section enable read-write access to Actions and Contents
 10. Skip the "Organization permissions" section
 11. Click "Generate token" or "Generate token and request access" (if it is in an org you are not an admin of)
 
