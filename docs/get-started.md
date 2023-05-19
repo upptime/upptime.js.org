@@ -11,7 +11,7 @@ You can click on the following link to generate a repository using the template:
 In both cases, the next steps are:
 
 1. Enter a name for your new repository.
-1. Important: Check "Include all branches".
+1. **Important:** Check "Include all branches".
 1. Click on "Create repository from template".
 
 For more details on how to create repositories using template, read the article on the GitHub website: [Creating a repository from a template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
@@ -20,7 +20,7 @@ For more details on how to create repositories using template, read the article 
 
 ## After creating your repository
 
-The following steps apply to your new repository, not the upptime/upptime template repository.
+The following steps apply to your new repository, not the `upptime/upptime` template repository.
 
 ### Enable publishing
 
@@ -29,12 +29,11 @@ Usually, GitHub will enable GitHub Pages as soon as a `gh-pages` branch is detec
 
 1. Go to your repository settings page
 1. Go to the "Pages" sub-section on the left
-1. Under "Source", change "None" to `gh-pages`
-1. In the folder dropdown, select `/(root)`
-1. Skip the "Theme Chooser" option 
+1. Under "Source", change "None" to "Deploy from a branch"
+1. In the Branch dropdown, select `gh-pages` and `/(root)`
 1. Click on "Save"
 
-After saving, you will see confirmation text "Your site is ready to be published at...". For more information on enabling GitHub Pages, see the article on the GitHub website: [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+After saving, you will see confirmation text "Your site is live at..." at the top of the page. For more information on enabling GitHub Pages, see the article on the GitHub website: [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 If you don't want to have a publicly-available status website, you don't have to enable publishing. If that is the case, you can also choose to keep your repository private. It is **not** possible to publish a status website from a private repository without using an API proxy with authentication. See [#54](https://github.com/upptime/upptime/issues/54) and the [Configuration for `apiBaseUrl`](https://upptime.js.org/docs/configuration#custom-api-base-url) to learn how to set up a status website from your private repository.
 
@@ -42,21 +41,24 @@ If you don't want to have a publicly-available status website, you don't have to
 
 All sensitive information required, such as API keys, are provided as environment variables. These are stored as GitHub repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)).
 
-To make commits and publish your website, Upptime requires a personal access token (PAT) with the `repo` and `workflow` scope, stored as a repository secret `GH_PAT`. You can create a personal access token by following these steps:
+To make commits and publish your website, Upptime requires a personal access token (PAT) with the Actions and Contents read-write permissions, stored as a repository secret named `GH_PAT`. You can create a personal access token by following these steps:
 
 1. Click on your profile picture on the top-right corner and select "Settings"
 2. In the left sidebar, select "Developer settings"
-3. In the left sidebar, click "Personal access tokens"
+3. In the left sidebar, click "Personal access tokens" > "Fine-grained tokens"
 4. Click "Generate new token"
 5. Give your token a specific distinct name
-6. In the "Expiration" dropdown, select "No expiration"
-5. Select the "repo" and "workflow" scopes
-6. Click "Generate token"
+6. In the "Expiration" dropdown, select "90 days" or a custom, longer expiry
+7. In the "Resource Owner" section select the user or organization your Upptime repository belongs to
+8. In the "Repository Access" section select "Only select repositories" and select your Upptime repository
+9. In the "Permissions" > "Repository permissions" section enable read-write access to Actions and Contents
+10. Skip the "Organization permissions" section
+11. Click "Generate token" or "Generate token and request access" (if it is in an org you are not an admin of)
 
 After generating your token, copy it (you will not see it again). Then, add it as a repository secret:
 
 1. In your Upptime repository, select "Settings"
-2. In the left sidebar, click "Secrets" followed by "Actions"
+2. In the left sidebar, click "Secrets and variables" followed by "Actions"
 3. Press the button "New repository secret"
 4. Enter the name of the secret as `GH_PAT`
 5. Paste your personal access token into the Value field
