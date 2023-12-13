@@ -74,6 +74,27 @@ sites:
     port: 53
 ```
 
+You can also use hostnames with "tcp-ping":
+
+```yaml
+sites:
+  - name: Google DNS
+    check: "tcp-ping"
+    url: dns.google
+    port: 53
+```
+
+If you want to test only IPv6 for specific hostnames (e.g. use only the AAAA DNS records), then set the `ipv6` flag to `true`:
+
+```yaml
+sites:
+  - name: Google DNS
+    check: "tcp-ping"
+    url: dns.google
+    port: 53
+    ipv6: true
+```
+
 #### Secret URLs
 
 If you don't want to show a URL publicly, you can use repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)). Instead of the plain text URL, add the name of the secret prefixed with a $ character:
