@@ -217,3 +217,26 @@ All services require you to specify the phone number from and to:
 | `NOTIFICATION_SMS_TWILIO`             | Set to `true`      |
 | `NOTIFICATION_SMS_TWILIO_ACCOUNT_SID` | Twilio account SID |
 | `NOTIFICATION_SMS_TWILIO_AUTH_TOKEN`  | Twilio auth token  |
+
+## Custom Notifications
+
+Both the up and down/degraded performance notifications can be customized with your preferred message, configured as an environment variable.
+Multiple variables are available to use within the message, relating to the site and status.
+
+### Environment Variables
+
+| Value                        | Description                       |
+| ---------------------------- | --------------------------------- |
+| `NOTIFICATIONS_DOWN_MESSAGE` | Down/degraded performance message |
+| `NOTIFICATIONS_UP_MESSAGE`   | Up message                        |
+
+### Message Variables
+
+| Value                                  | Example                                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$SITE_NAME`                           | Example Site                                                                                                                          |
+| `$SITE_URL`                            | (https://example.koj.co)                                                                                                              |
+| `$ISSUE_URL` _(down message only)_     | https://github.com/upptime/upptime/issues/4                                                                                           |
+| `$RESPONSE_CODE` _(down message only)_ | 500                                                                                                                                   |
+| `$STATUS`                              | <ul><li>**down**</li><li>experiencing **degraded performance**</li><li>is back up</li><li>performance has improved</li></ul>          |
+| `$EMOJI`                               | <ul><li>🟥</li><li>🟨</li><li>🟩</li></ul>                                                                                           |
