@@ -496,6 +496,8 @@ workflowSchedule:
 
 ### Self-hosted runners
 
+> As of now, the workflows CANNOT run on windows runner.
+
 You may want to use a self-hosted runner instead of the publicly available GitHub runners in your project for more accurate uptime monitoring (ensuring scheduled workflows run on time) or to save build minutes. You can specify your self-hosted runner like so:
 
 ```yaml
