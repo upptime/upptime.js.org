@@ -251,6 +251,17 @@ sites:
       - AnandChowdhary
 ```
 
+### Skip delete issues
+Issues are automatically closed once they are resolved, however if they are open for less than 15 minutes they are deleted instead.
+
+You can disable this behaviour by setting the `skipDeleteIssues` key to `true` in your configuration file:
+
+```yaml
+skipDeleteIssues: true
+```
+
+If issues are deleted, they won't show up in the incident history.
+
 ### Status website
 
 #### Theme
