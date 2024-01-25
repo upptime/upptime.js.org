@@ -27,6 +27,8 @@ To add information about an incident, you can add comments to the issue. By defa
 
 You can see an [example issue #67](https://github.com/upptime/upptime/issues/67).
 
+The issue is automatically deleted (instead of closed) if the downtime is less than 15 minutes. This prevents false positives from showing up in your incident history.
+
 ### GitHub Pages-powered status website
 
 Lastly, you get a beautiful, staticly-generated status website. This website will show users your websites' live status, incident history, and response time graphs. The website is always up-to-date as it uses the GitHub API to fetch data in real-time, and is built using Svelte and Sapper. You can customize the logo, copy, and more to make it your own.
