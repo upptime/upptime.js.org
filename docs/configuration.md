@@ -227,6 +227,14 @@ sites:
 
 In the above example, if the body HTML response does **not** include "status":"UP", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded_if_text_missing` to mark the site as "degraded" instead.
 
+### Check Delay
+
+You can specify an optional `delay` (in milliseconds) that will occur between checking each configured endpoint. By default, there is no delay.
+
+```yaml
+delay: 2000 # 2 seconds
+```
+
 ### Notifications
 
 You can add services to send downtime notifications to, such as SMS, Slack, or email. For more information about notifications, visit the [Notifications docs](/docs/notifications) page. You can directly configure the notifications in repository secrets (environment variables).
