@@ -445,6 +445,16 @@ status-website:
   apiBaseUrl: https://api.github.com
 ```
 
+#### Custom raw content URL 
+
+By default, Upptime uses https://raw.githubusercontent.com to fetch raw content from GitHub repositories. This document provides instructions on how to set a custom userContentBaseUrl if you are using a proxy or another content delivery URL.
+
+```yaml
+status-website:
+  userContentBaseUrl: https://raw.githubusercontent.com
+```
+
+
 ### Internationalization
 
 Though our status page is in English, you can use any language with Upptime by supplying the required strings. The list of all required strings is available in [`upptime/status-page/i18n.yml`](https://github.com/upptime/status-page/blob/master/i18n.yml), and you can add them under the i18n key in the configuration file:
