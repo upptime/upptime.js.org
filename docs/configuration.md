@@ -447,7 +447,7 @@ status-website:
 
 #### Custom raw content URL 
 
-By default, Upptime uses https://raw.githubusercontent.com to fetch raw content from GitHub repositories. This document provides instructions on how to set a custom userContentBaseUrl if you are using a proxy or another content delivery URL.
+By default, Upptime uses https://raw.githubusercontent.com to fetch raw content from GitHub repositories. If you are using a proxy or another content delivery URL, you can replace the default user content base URL.
 
 ```yaml
 status-website:
