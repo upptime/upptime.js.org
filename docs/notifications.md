@@ -87,7 +87,9 @@ The `NOTIFICATION_ZULIP_MESSAGE_URL` should include the `type`, `to` and `topic`
 
 To create a Microsoft Teams webhook URL, see the article [Create Incoming Webhooks](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) on the Microsoft Learn website.
 
-### Custom Webhook
+### Custom webhook
+
+Tip: You can use [webhook.site](https://webhook.site) to test the webhook.
 
 | Environment variable             | Value               |
 | -------------------------------- | ------------------- |
