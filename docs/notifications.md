@@ -87,6 +87,15 @@ The `NOTIFICATION_ZULIP_MESSAGE_URL` should include the `type`, `to` and `topic`
 
 To create a Microsoft Teams webhook URL, see the article [Create Incoming Webhooks](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) on the Microsoft Learn website.
 
+### Custom webhook
+
+Tip: You can use [webhook.site](https://webhook.site) to test the webhook.
+
+| Environment variable             | Value               |
+| -------------------------------- | ------------------- |
+| `NOTIFICATION_CUSTOM_WEBHOOK`    | Set to `true`       |
+| `NOTIFICATION_CUSTOM_WEBHOOK_URL`| custom webhook URL  |
+
 ### Email
 
 To send an email, you can use SMTP or a hosted service such as AWS SES, Sendgrid, Sparkpost, or Mailgun.
