@@ -332,7 +332,19 @@ status-website:
   name: Your Status Website
 ```
 
-Then, your status page may be hosted on https://user.github.io/repo/, where `user` is your GitHub username and `repo` is your repository name.
+Then, your status page may be hosted on https://user.github.io/repo/, where `user` is your GitHub username and `repo` is your repository name. 
+
+Note that if you are using a custom domain for your github pages account site (i.e. your user.github.io repo has a custom domain like `example.com`) you will need to use the `cname` **AND** `baseUrl` parameters. This is because github pages will add a slug of your repo name to the end of the custom domain.
+
+```yaml
+status-website:
+  name: Upptime
+  logoUrl: https://example.com/image.jpg
+  cname: example.com # Custom CNAME
+  baseUrl: /upptime # where "repo" is your repository name
+```
+
+This configuration will work for `https://example.com/upptime`.
 
 #### Navbar links
 
