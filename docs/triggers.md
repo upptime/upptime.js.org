@@ -10,7 +10,7 @@ Upptime has several workflows that are run on different intervals, all of which 
 
 ### Setup CI
 
-This workflow is triggered after you edit the configuration file, and runs alls steps: checking uptime, tracking response time, updating the README, and generating graphs. If you want to "force" Upptime to run everything once (for example, after you've set up the template or after you've made a configuration change), you can manually trigger Setup CI.
+This workflow is triggered after you edit the configuration file, and runs all steps: checking uptime, tracking response time, updating the README, and generating graphs. If you want to "force" Upptime to run everything once (for example, after you've set up the template or after you've made a configuration change), you can manually trigger Setup CI.
 
 ### Uptime CI
 
@@ -22,7 +22,7 @@ This workflow runs once a week and updates the internal code of Upptime to make 
 
 ### Static Site CI
 
-This workflow builds and deploys your status page website using GitHub Pages. It reads from your configuration and builds the Svelte/Sapper website, then deploys is to the `gh-pages` branch and triggers a re-build on GitHub Pages. By default, this runs once every week, but you can manually run it, for example after updating your configuration or setting up the template.
+This workflow builds and deploys your status page website using GitHub Pages. It reads from your configuration and builds the Svelte/Sapper website, then deploys it to the `gh-pages` branch and triggers a re-build on GitHub Pages. By default, this runs once every week, but you can manually run it, for example after updating your configuration or setting up the template.
 
 ### Graphs CI
 
