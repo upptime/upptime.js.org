@@ -227,6 +227,19 @@ sites:
 
 In the above example, if the body HTML response does **not** include "status":"UP", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded_if_text_missing` to mark the site as "degraded" instead.
 
+#### Custom slug
+
+Slugs are used to identify sites across the whole repository, so they should be unique. Upptime will automatically generate a slug for your endpoint from its name, but sometimes it may not be ideal. In that case, you can use `slug` option to specify a custom string for your site:
+
+```yaml
+sites:
+  - name: Custom site with custom slug
+    url: https://example.com
+    slug: custom-site
+```
+
+In the above example, the site will use `custom-site` as its slug. The history file name, the graph file name and its subpath in status page (if available) will also be this.
+
 ### Check Delay
 
 You can specify an optional `delay` (in milliseconds) that will occur between checking each configured endpoint. By default, there is no delay.
