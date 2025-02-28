@@ -87,6 +87,19 @@ The `NOTIFICATION_ZULIP_MESSAGE_URL` should include the `type`, `to` and `topic`
 
 To create a Microsoft Teams webhook URL, see the article [Create Incoming Webhooks](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) on the Microsoft Learn website.
 
+### Gotify
+
+| Environment variable             | Value                                                |
+| -------------------------------- | ---------------------------------------------------- |
+| `NOTIFICATION_GOTIFY`            | Set to `true`                                        |
+| `NOTIFICATION_GOTIFY_URL`        | Gotify URL                                           |
+| `NOTIFICATION_GOTIFY_TOKEN`      | Gotify application token                             |
+| `NOTIFICATION_GOTIFY_TITLE`      | Notification title. Defaults to `Upptime` if not set |
+| `NOTIFICATION_GOTIFY_PRIORITY`   | Notification priority. Defaults to `5` if not set    |
+
+To create a Gotify server, see the official [documentation](https://gotify.net/docs/index) of the [Gotify](https://gotify.net) project.
+The `NOTIFICATION_GOTIFY_URL` should not include `/` at the end of server URL.
+
 ### Custom webhook
 
 Tip: You can use [webhook.site](https://webhook.site) to test the webhook.
