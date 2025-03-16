@@ -6,7 +6,7 @@ To use Upptime as an uptime monitor and status website generator, you start by c
 
 ## Create a repository from the template
 
-You can click on the following link to generate a repository using the template: [**Create a new repository**](https://github.com/upptime/upptime/generate) from `upptime/upptime`. Alternatively, you can visit the [Upptime repository on GitHub](https://github.com/upptime/upptime) and click on the "Use this template" button on the top-right. 
+You can click on the following link to generate a repository using the template: [**Create a new repository**](https://github.com/upptime/upptime/generate) from `upptime/upptime`, make sure that you include all branches. Alternatively, you can visit the [Upptime repository on GitHub](https://github.com/upptime/upptime) and click on the "Use this template" button on the top-right. 
 
 In both cases, the next steps are:
 
