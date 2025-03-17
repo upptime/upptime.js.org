@@ -382,12 +382,13 @@ status-website:
 
 #### Custom HTML
 
-To add any custom HTML (unsanitized), you can use `customHeadHtml` and `customBodyHtml`:
+To add any custom HTML (unsanitized), you can use `customHeadHtml`, `customBodyHtml` and `customFootHtml`:
 
 ```yaml
 status-website:
   customHeadHtml: "<!-- Custom HTML to add in the <head> tag -->"
   customBodyHtml: "<!-- Custom HTML to add at the beginning of <body> -->"
+  customFootHtml: "<!-- Custom HTML to add at the end of <body> -->"
 ```
 
 #### Custom JavaScript
