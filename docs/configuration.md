@@ -270,9 +270,9 @@ This is a native integration and all Upptime features will work as expected.
 
 #### Globalping Limits
 
-By default you can run 250 tests per hour per IP address if unauthenticated. But note that cloud runners share their IPs among users, so you could hit your limit sooner than expacted.
+By default you can run 250 tests per hour per IP address if unauthenticated. But note that cloud runners share their IPs among users, so you could hit your limit sooner than expected.
 
-Instead it is recommended to authenticate using a token and a higher limit of 500 tests per hour. 
+Instead, we recommend authenticating using a token to get a higher limit of 500 tests per hour.
 
 
 #### Globalping Authentication
