@@ -261,6 +261,7 @@ sites:
 The  `location` option can accept the following: continents, countries, regions, cities, ASNs, ISPs and cloud region names.
 You can additionally pinpoint a location by combining filters using the `+` operator. For example, `amazon+germany` or `comcast+california`.  [Full location input documentation](https://github.com/jsdelivr/globalping?tab=readme-ov-file#test-with-magic-)
 
+If you host your own probes you can also target them using your username or tags you create, e.g. this is a valid location `jimaek`.
 
 Note: Globalping supports both PING and HTTP tests, but no POST requests.
 
