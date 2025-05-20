@@ -22,6 +22,10 @@ For more details on how to create repositories using template, read the article 
 
 The following steps apply to your new repository, not the `upptime/upptime` template repository.
 
+### Enable workflows
+
+To be able to see and run all the workflows that come with the upptime repo your first step must be to open the `Actions` tab on your fork. There you will find a dialog and a button that will allow you to enable the workflows that come with upptime.
+
 ### Enable publishing
 
 To get a static status website, you have to enable GitHub Pages on your new repository.  
