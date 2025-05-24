@@ -31,3 +31,11 @@ i18n:
 ## I'm getting a 404 error in Setup CI
 
 Make sure you've changed the `owner` and `repo` in the [Configuration](/docs/configuration/).
+
+## I'm hitting the Globalping limit 
+
+It's possible your test is running on the same cloud server as another user's, effectively sharing the limit due to the having the same IP address.
+
+To avoid this, you can consider switching to a self-hosted runner.
+
+Or you can authenticate using a token and a higher limit of 500 tests per hour. See [Globalping Authentication](/docs/configuration#globalping-authentication).
