@@ -11,6 +11,10 @@ user-agent: koj-co
 sites: # List of endpoints to track
   - name: Google
     url: https://www.google.com
+  - name: Bing
+    url: https://www.bing.com
+    type: globalping # Use the Globalping platform to run the check
+    location: california # Location to run the check from. Default is "World"
 assignees: # Users to assign downtime issues (optional)
   - AnandChowdhary
 status-website: # Status website (optional)
@@ -239,6 +243,43 @@ sites:
 ```
 
 In the above example, the site will use `custom-site` as its slug. The history file name, the graph file name and its subpath in status page (if available) will also be this.
+
+### Globalping
+
+Instead of running checks from the GitHub Actions runner, cloud or self-hosted, you can use the [Globalping](https://globalping.io) platform to run checks from any location around the world.
+
+To enable Globalping, add the `type: globalping` option to the site configuration and specify the location to run the check from:
+
+```yaml
+sites:
+  - name: Google
+    url: https://www.google.com
+    type: globalping
+    location: california # Location to run the check from. Optional. Default is "World"
+```
+
+The  `location` option can accept the following: continents, countries, regions, cities, ASNs, ISPs and cloud region names.
+You can additionally pinpoint a location by combining filters using the `+` operator. For example, `amazon+germany` or `comcast+california`.  [Full location input documentation](https://github.com/jsdelivr/globalping?tab=readme-ov-file#test-with-magic-)
+
+If you host your own probes you can also target them using your username or tags you create, e.g. this is a valid location `jimaek`.
+
+Note: Globalping supports both PING and HTTP tests, but no POST requests.
+
+
+This is a native integration and all Upptime features will work as expected.
+
+#### Globalping Limits
+
+By default you can run 250 tests per hour per IP address if unauthenticated. But note that cloud runners share their IPs among users, so you could hit your limit sooner than expected.
+
+Instead, we recommend authenticating using a token to get a higher limit of 500 tests per hour.
+
+
+#### Globalping Authentication
+
+Simply register an account at [Globalping](https://dash.globalping.io) and get a token by going to the "Tokens" side-menu. 
+
+Then add the token to your repository secrets as `GLOBALPING_TOKEN`.
 
 ### Check Delay
 
