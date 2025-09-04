@@ -256,6 +256,17 @@ sites:
     url: https://www.google.com
     type: globalping
     location: california # Location to run the check from. Optional. Default is "World"
+  - name: Wikipedia
+    url: wikipedia.org
+    type: globalping
+    check: icmp-ping
+    location: Berlin
+  - name: Bing
+    url: bing.com
+    type: globalping
+    check: tcp-ping
+    location: Singapore
+    ipv6: true
 ```
 
 The  `location` option can accept the following: continents, countries, regions, cities, ASNs, ISPs and cloud region names.
