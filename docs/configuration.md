@@ -62,7 +62,7 @@ sites:
     method: DELETE
 ```
 
-#### TCP Port Enpoints
+#### TCP Port Endpoints
 
 To make a TCP ping to any port, you can add the check key "tcp-ping":
 
