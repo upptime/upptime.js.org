@@ -502,6 +502,15 @@ status-website:
   robotsText: "User-agent: * \n Disallow: /"
 ```
 
+#### Enable status page for private repositories
+
+By default, status websites for private repositories are not published to enhance security and prevent the accidental exposure of private data.
+If you have a private repository and wish to publish your status website, you need to explicitly set the publish option to true in your configuration.
+```yaml
+status-website:
+  publish: true
+```
+
 #### Custom API base URL
 
 By default, Upptime uses the official GitHub API to fetch data for your status page website. If you have a proxy API (perhaps using a personal access token with readonly access to your private repository), you can set the `apiBaseUrl` key under `status-website`:
