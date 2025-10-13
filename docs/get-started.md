@@ -33,9 +33,7 @@ Usually, GitHub will enable GitHub Pages as soon as a `gh-pages` branch is detec
 
 1. Go to your repository settings page
 1. Go to the "Pages" sub-section on the left
-1. Under "Source", change "None" to "Deploy from a branch"
-1. In the Branch dropdown, select `gh-pages` and `/(root)`
-1. Click on "Save"
+1. Under "Source", change "None" to "GitHub Actions"
 
 After saving, you will see confirmation text "Your site is live at..." at the top of the page. For more information on enabling GitHub Pages, see the article on the GitHub website: [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
