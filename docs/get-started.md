@@ -106,6 +106,8 @@ After updating the configuration file, Upptime should run workflows using GitHub
 
 If you've forked the Upptime repository or have rules to disable Actions by default, you'll have to manually enable GitHub Actions, but this should probably not be your case.
 
+If you get the Error: `"Unable to find workflow 'Graphs CI' in User/Repo"` then try adding a space after the first # in all .yml files in `.github/workflows`.
+
 ### Best practices
 
 Now that you have your Upptime instance fully set up, you should follow these best practices when adding details to outage incidents.
