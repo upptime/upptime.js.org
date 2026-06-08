@@ -28,12 +28,12 @@ To be able to see and run all the workflows that come with the upptime repo your
 
 ### Enable publishing
 
-To get a static status website, you have to enable GitHub Pages on your new repository.  
-Usually, GitHub will enable GitHub Pages as soon as a `gh-pages` branch is detected. If this doesn't happen should you do the following steps.
+To get a static status website, you have to enable GitHub Pages on your new repository.
+Upptime's generated Static Site CI publishes the built website to the `gh-pages` branch, so configure Pages to deploy from that branch. Usually GitHub enables Pages automatically as soon as the `gh-pages` branch is detected. If it doesn't, follow these steps:
 
 1. Go to your repository settings page
 1. Go to the "Pages" sub-section on the left
-1. Under "Source", change "None" to "Deploy from a branch"
+1. Under "Source", select "Deploy from a branch" instead of "GitHub Actions"
 1. In the Branch dropdown, select `gh-pages` and `/(root)`
 1. Click on "Save"
 
