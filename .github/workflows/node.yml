@@ -6,6 +6,9 @@ on:
   repository_dispatch:
     types: [build]
   workflow_dispatch:
+permissions:
+  contents: write
+
 jobs:
   release:
     name: Build and deploy site
@@ -13,9 +16,9 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v6
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v6
         with:
           node-version: 14
       - name: Install dependencies
@@ -23,7 +26,7 @@ jobs:
       - name: Build static site
         run: npm run build
       - name: Deploy site to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
