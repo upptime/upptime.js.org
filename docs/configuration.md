@@ -259,14 +259,14 @@ sites:
   - name: Wikipedia
     url: wikipedia.org
     type: globalping
-    check: icmp-ping
+    check: tcp-ping # Run a Globalping PING check
     location: Berlin
   - name: Bing
     url: bing.com
     type: globalping
     check: tcp-ping
     location: Singapore
-    ipv6: true
+    ipv6: true # Use IPv6 probes/AAAA records
 ```
 
 The  `location` option can accept the following: continents, countries, regions, cities, ASNs, ISPs and cloud region names.
@@ -274,8 +274,11 @@ You can additionally pinpoint a location by combining filters using the `+` oper
 
 If you host your own probes you can also target them using your username or tags you create, e.g. this is a valid location `jimaek`.
 
-Note: Globalping supports both PING and HTTP tests, but no POST requests.
+Use `check: tcp-ping` for Globalping PING checks. `icmp-ping` is not a supported Upptime check value; leaving `check` unset runs an HTTP check instead.
 
+For IPv6-only targets, set `ipv6: true` with Globalping or use a self-hosted runner that has IPv6 connectivity. GitHub-hosted runners may not be able to reach IPv6-only endpoints from the local runner path.
+
+Note: Globalping supports both PING and HTTP tests, but no POST requests.
 
 This is a native integration and all Upptime features will work as expected.
 
