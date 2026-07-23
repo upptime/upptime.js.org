@@ -71,6 +71,16 @@ After generating your token, copy it (you will not see it again). Then, add it a
 
 For more information on PATs, read article on the GitHub website: [Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
+Generated workflows pass `GH_PAT` separately. For other secrets, add an exact allowlist to `.upptimerc.yml` so Upptime receives only the values it needs:
+
+```yaml title=".upptimerc.yml"
+secrets:
+  - PRIVATE_API_URL
+  - PRIVATE_API_TOKEN
+```
+
+Existing repositories without a `secrets` key use automatic compatibility mode, which generates explicit references for supported configuration and Upptime runtime secrets. It does not pass the complete repository secrets context. See [Secret allowlist](/docs/configuration#secret-allowlist) for strict mode, automatic discovery, and troubleshooting.
+
 ### Update configuration
 
 The `.upptimerc.yml` file is used as the central configuration store. In that file, you can specify which endpoints you want to monitor and configure your status website. For more information, visit [Configuration](/docs/configuration).

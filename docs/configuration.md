@@ -99,22 +99,67 @@ sites:
     ipv6: true
 ```
 
+#### Secret allowlist
+
+Secrets used by uptime checks and notifications can be restricted with the top-level `secrets` setting. The recommended strict configuration lists every GitHub Actions secret that Upptime may use:
+
+```yaml
+secrets:
+  - PRIVATE_API_URL
+  - PRIVATE_API_TOKEN
+  - PRIVATE_TCP_HOST
+  - PRIVATE_TCP_PORT
+
+sites:
+  - name: Private API
+    url: $PRIVATE_API_URL
+    headers:
+      - "Authorization: Bearer $PRIVATE_API_TOKEN"
+    body: '{ "token": "$PRIVATE_API_TOKEN" }'
+  - name: Private TCP service
+    check: "tcp-ping"
+    url: $PRIVATE_TCP_HOST
+    port: $PRIVATE_TCP_PORT
+```
+
+When `secrets` is present, it is the complete allowlist. This includes `secrets: []`, which passes no contextual secrets:
+
+```yaml
+secrets: []
+```
+
+`GH_PAT` does not need to be listed because generated workflows pass it separately.
+
+For compatibility with existing repositories, omitting `secrets` enables automatic mode. Upptime generates explicit references for secret-like `$NAME` values in supported site URLs, headers, bodies, ports, and response-body checks, together with the finite set of secrets used by Upptime's notification and runtime features. It never passes the complete GitHub Actions secrets context. After confirming which secrets your configuration needs, add an explicit list for strict least privilege.
+
+Secret names must contain only uppercase letters, numbers, and underscores, must not start with a number, and must not start with the reserved `GITHUB_` prefix.
+
+If a literal `$NAME` appears in a request, confirm that the repository secret exists and that `NAME` is included in an explicit `secrets` list. An empty `secrets` list intentionally disables secret substitution. `GH_PAT`, `GITHUB_*` values, `$DYNAMIC_RANDOM_NUMBER`, and `$DYNAMIC_ALPHANUMERIC_STRING` are provided separately or generated at runtime and should not be added.
+
 #### Secret URLs
 
 If you don't want to show a URL publicly, you can use repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)). Instead of the plain text URL, add the name of the secret prefixed with a $ character:
 
 ```yaml
-- name: Secret Site
-  url: $SECRET_SITE
+secrets:
+  - SECRET_SITE
+
+sites:
+  - name: Secret Site
+    url: $SECRET_SITE
 ```
 
-In the above example, a secret named `SECRET_SITE` (without the $) is stored in the repository. You can add as many secrets as you like, and use them in URLs by adding the `$`prefix. For example, if your environment variable is called`API_URL`, the site URL can be `$API_URL`.
+In the above example, a secret named `SECRET_SITE` (without the `$`) is stored in the repository. You can add as many secrets as you like, and use them in URLs by adding the `$` prefix. For example, if your environment variable is called `API_URL`, the site URL can be `$API_URL`.
 
 You can also use these secrets as part of the URL, for example using a secret called `MY_API_KEY`:
 
 ```yaml
-- name: API endpoint
-  url: https://example.com/get-user/3?api_key=$MY_API_KEY
+secrets:
+  - MY_API_KEY
+
+sites:
+  - name: API endpoint
+    url: https://example.com/get-user/3?api_key=$MY_API_KEY
 ```
 
 #### Request headers
@@ -122,11 +167,15 @@ You can also use these secrets as part of the URL, for example using a secret ca
 Similarly, you can set headers in a request like so:
 
 ```yaml
-- name: API endpoint
-  url: https://example.com/get-user/3
-  headers:
-    - "Authorization: Bearer $SECRET_SITE_2"
-    - "Content-Type: application/json"
+secrets:
+  - SECRET_SITE_2
+
+sites:
+  - name: API endpoint
+    url: https://example.com/get-user/3
+    headers:
+      - "Authorization: Bearer $SECRET_SITE_2"
+      - "Content-Type: application/json"
 ```
 
 #### Request body
@@ -134,12 +183,16 @@ Similarly, you can set headers in a request like so:
 If you want to send data alongside the headers, you can use the `body` key:
 
 ```yaml
-- name: API endpoint with data
-  method: POST
-  url: https://example.com/login
-  headers:
-    - "Content-Type: application/json"
-  body: '{ "password": "hello" }'
+secrets:
+  - PRIVATE_API_TOKEN
+
+sites:
+  - name: API endpoint with data
+    method: POST
+    url: https://example.com/login
+    headers:
+      - "Content-Type: application/json"
+    body: '{ "token": "$PRIVATE_API_TOKEN" }'
 ```
 
 You can add any string to the `body` parameter, but make sure that you supply the relevant content-type header too.
