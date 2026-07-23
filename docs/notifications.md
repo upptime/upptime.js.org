@@ -6,6 +6,16 @@ Using notifications, you can alert your team when an endpoint goes down or exper
 
 ![Secrets](https://user-images.githubusercontent.com/22931360/232315630-59689bdd-6c88-4454-9fd8-8eb64844f968.png)
 
+For strict least privilege, list every notification secret used by your provider in the top-level `.upptimerc.yml` `secrets` allowlist. Include enablement flags stored as secrets, not just credentials and webhook URLs. For Slack:
+
+```yaml title=".upptimerc.yml"
+secrets:
+  - NOTIFICATION_SLACK
+  - NOTIFICATION_SLACK_WEBHOOK_URL
+```
+
+When `secrets` is present, the list is authoritative. For another provider, list every environment variable from its table below that you store as a GitHub secret, including an optional strategy variable. Repositories without a `secrets` key use automatic compatibility mode for Upptime's built-in notification settings. See [Secret allowlist](/docs/configuration#secret-allowlist) for details.
+
 
 Every time an endpoint goes down, a notification with the following text is sent:
 
@@ -40,7 +50,6 @@ For each notification type (Slack, email, etc.), you need to first enable it by 
 | Environment variable             | Value             |
 | -------------------------------- | ----------------- |
 | `NOTIFICATION_SLACK`             | Set to `true`     |
-| `NOTIFICATION_SLACK_WEBHOOK`     | Set to `true`     |
 | `NOTIFICATION_SLACK_WEBHOOK_URL` | Slack webhook URL |
 
 To create a Slack webhook URL, see the article [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack) on the Slack website.
@@ -59,8 +68,6 @@ To create a Telegram bot key, see the documentation for [Botfather](https://core
 
 | Environment variable               | Value               |
 | ---------------------------------- | ------------------- |
-| `NOTIFICATION_DISCORD`             | Set to `true`       |
-| `NOTIFICATION_DISCORD_WEBHOOK`     | Set to `true`       |
 | `NOTIFICATION_DISCORD_WEBHOOK_URL` | Discord webhook URL |
 
 To create a Discord webhook URL, see the article [Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) on the Discord Support website.
