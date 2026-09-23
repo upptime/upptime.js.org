@@ -45,7 +45,11 @@ If you don't want to have a publicly-available status website, you don't have to
 
 All sensitive information required, such as API keys, are provided as environment variables. These are stored as GitHub repository secrets (see [Creating and storing encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)).
 
-To make commits and publish your website, Upptime requires a personal access token (PAT) with read-write permissions of Actions, Contents, Issues and Workflows, stored as a repository secret named `GH_PAT`. You can create a personal access token by following these steps:
+To make commits and publish your website, Upptime needs a token with access to your status repository. You can use either a GitHub App installation token or a personal access token (PAT). Generated workflows prefer the App token, then `GH_PAT`, then the workflow's `GITHUB_TOKEN`.
+
+**GitHub App option:** Install a GitHub App on your status repository with read-write repository permissions for Actions, Contents, Issues, and Workflows. Set repository **variable** `GH_APP_ID` to the App's **Client ID** (not its numeric App ID), and repository **secret** `GH_APP_PRIVATE_KEY` to its private key. The variable name is historical: Upptime passes it to the `client-id` input of `actions/create-github-app-token@v3`. The workflows generate a short-lived installation token for the current repository; you do not need a `GH_PAT` secret when this succeeds. Do not add `GH_APP_PRIVATE_KEY` to the `.upptimerc.yml` `secrets` allowlist: the generated workflow handles it separately. See [GitHub's instructions for creating a GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app) and [managing its private keys](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
+
+**PAT option:** Store a personal access token with read-write permissions for Actions, Contents, Issues, and Workflows as the repository secret `GH_PAT`. To create a fine-grained PAT:
 
 1. Click on your profile picture on the top-right corner and select "Settings"
 2. In the left sidebar, select "Developer settings"
