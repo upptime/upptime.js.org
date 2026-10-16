@@ -99,6 +99,31 @@ sites:
     ipv6: true
 ```
 
+A "tcp-ping" check only opens a connection. A firewall or proxy that accepts the connection makes the site "up", even when the service behind it is broken. To also read what the server sends, use the check key "tcp" with a body rule (see [Custom status detection](#custom-status-detection)). For example, to make sure that an SSH server sends its banner:
+
+```yaml
+sites:
+  - name: SSH gateway
+    check: "tcp"
+    url: ssh.example.com
+    port: 22
+    __dangerous__body_down_if_regex_missing: "^SSH-2\\.0-"
+```
+
+You can send data after the connection opens with `body`. Use double quotes in YAML to send `\r\n`:
+
+```yaml
+sites:
+  - name: Redis
+    check: "tcp"
+    url: redis.example.com
+    port: 6379
+    body: "PING\r\n"
+    __dangerous__body_down_if_text_missing: "+PONG"
+```
+
+The "tcp" check reads until the body rules are satisfied, the server closes the connection, 64 KiB is received, or no data is received for `requestTimeout` seconds (default: 10). If you do not set a body rule, the check stops when the connection opens. The `connectTimeout` (default: 30 seconds) and `ipv6` options also apply. The "tcp" check does not use TLS, and it is not available with Globalping.
+
 #### Secret allowlist
 
 Secrets used by uptime checks and notifications can be restricted with the top-level `secrets` setting. The recommended strict configuration lists every GitHub Actions secret that Upptime may use:
@@ -283,6 +308,17 @@ sites:
 ```
 
 In the above example, if the body HTML response does **not** include "status":"UP", the site will be marked as "down". Similarly, you can use `__dangerous__body_degraded_if_text_missing` to mark the site as "degraded" instead.
+
+To use a regular expression instead of text, use `__dangerous__body_down_if_regex_missing`. If the body does **not** match the regular expression, the site will be marked as "down":
+
+```yaml
+sites:
+  - name: Custom up
+    url: https://example.com/api/health
+    __dangerous__body_down_if_regex_missing: '"status":\s*"(healthy|ok)"'
+```
+
+The pattern uses JavaScript regular expression syntax, without flags. If the pattern is not valid, the workflow fails. All of these body rules also apply to the "tcp" check.
 
 #### Custom slug
 
