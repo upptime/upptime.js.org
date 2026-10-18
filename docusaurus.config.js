@@ -153,7 +153,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `<img alt="Koj" src="https://kojcdn.com/v1593890003/website-v2/logo-white_rrauqe.svg" style="width: 50px; margin: 2.5rem 0"><p>Upptime is an open-source project by <a href="https://koj.co/?utm_source=upptime&utm_medium=footer&utm_campaign=docs">Koj</a>.<br><a href="https://koj.co/?utm_source=upptime&utm_medium=footer&utm_campaign=docs">Furnish your home in style, for as low as CHF175/month →</a></p>`,
+      copyright: `<p>Upptime is an open-source project by <a href="https://koj.co/?utm_source=upptime&utm_medium=footer&utm_campaign=docs">Koj</a>.<br><a href="https://koj.co/?utm_source=upptime&utm_medium=footer&utm_campaign=docs">Furnish your home in style, for as low as CHF175/month →</a></p>`,
     },
   },
   presets: [
